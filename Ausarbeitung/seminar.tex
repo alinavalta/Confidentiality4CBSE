@@ -1,0 +1,127 @@
+%% LaTeX2e class for seminar theses
+%% seminar.tex
+%% 
+%% Karlsruhe Institute of Technology
+%% Institute for Program Structures and Data Organization
+%% Chair for Software Design and Quality (SDQ)
+%%
+%% Dr.-Ing. Erik Burger
+%% burger@kit.edu
+%%
+%% Version 1.0.4, 2021-06-21
+
+%% Available page modes: oneside, twoside
+%% Available languages: english, ngerman
+%% Available modes: draft, final (see README)
+\documentclass[twoside, ngerman]{sdqseminar}
+
+%% ---------------------------------
+%% | Information about the thesis  |
+%% ---------------------------------
+
+%% Name of the author
+\author{Alina Valta}
+
+%% Title (and possibly subtitle) of the thesis
+\title{Refaktorisierung einer Architekturanalyse für Vertraulichkeit}
+
+%% Type of the thesis 
+% \thesistype{Seminar Thesis}
+
+%% Change the institute here, ``KASTEL'' is default
+% \myinstitute{Institute for \dots}
+
+%% The advisors are PhD Students or Postdocs
+\advisor{M.Sc. Frederik Reiche}
+
+\settitle
+
+%% --------------------------------
+%% | Settings for word separation |
+%% --------------------------------
+
+%% Describe separation hints here.
+%% For more details, see 
+%% http://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation
+\hyphenation{
+% me-ta-mo-del
+}
+
+%% --------------------------------
+%% | Bibliography                 |
+%% --------------------------------
+
+%% Use biber instead of BibTeX, see README
+\usepackage[citestyle=numeric,style=numeric,backend=biber]{biblatex}
+\addbibresource{seminar.bib}
+
+%% ====================================
+%% ====================================
+%% ||                                ||
+%% || Beginning of the main document ||
+%% ||                                ||
+%% ====================================
+%% ====================================
+\begin{document}
+
+%% Set PDF metadata
+\setpdf
+
+%% Set the title
+\maketitle
+
+%% ----------------
+%% |   Abstract   |
+%% ----------------
+ 
+%% The text is included from the following files:
+%% - sections/abstract
+
+\begin{abstract}
+%\input{sections/abstract.tex}
+\end{abstract}
+
+%% -----------------
+%% |   Main part   |
+%% -----------------
+
+
+%\input{sections/introduction.tex}
+%\input{sections/content.tex}
+%\input{sections/conclusion.tex}
+
+
+\section{Aufgabenstellung}
+Erklärung der Aufgabenstellung
+\begin{itemize}
+	\item Entfernen der Profils 
+\end{itemize}
+
+\section{Vertraulichkeitsanalyse}
+Grobe Beschreibung wie das bisherige Projekt funktioniert 
+\begin{itemize}
+	\item Modellierung der Vertraulichkeit im Model + Stereotypen mit Referenzen auf PCM Komponenten
+	\item Editor-Generierung
+	\item PCM2Prolog Generator
+	\item Weitere Schritte: Vertraulichkeitsanalyse mit Prolog (nur grob)
+\end{itemize}
+
+\section{Model}
+\begin{itemize}
+	\item Profile entfernt
+	\item Genauere Modellierung der InformationFlows
+\end{itemize}
+
+\section{Prolog Generator}
+\begin{itemize}
+	\item Wie kann das andere Modell auf den gleichen Prolog Code abgebildet werden
+\end{itemize}
+
+%% --------------------
+%% |   Bibliography   |
+%% --------------------
+
+%% Add entry to the table of contents for the bibliography
+\printbibliography[heading=bibintoc]
+
+\end{document}
