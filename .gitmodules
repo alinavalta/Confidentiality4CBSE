@@ -1,0 +1,6 @@
+[submodule "praktikumpcm2prolog"]
+	path = praktikumpcm2prolog
+	url = git@git.scc.kit.edu:uojxa/praktikumpcm2prolog.git
+[submodule "praktikummodel"]
+	path = praktikummodel
+	url = git@git.scc.kit.edu:uojxa/praktikummodel.git
