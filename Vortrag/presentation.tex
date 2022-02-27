@@ -5,23 +5,23 @@
 
 %% Beispiel-Präsentation
 \documentclass{sdqbeamer} 
- 
+ \usepackage{xcolor}
 %% Titelbild
 \titleimage{banner_2020_kit}
 
 %% Gruppenlogo
-%\grouplogo{mylogo} 
+\grouplogo{} 
 
 %% Gruppenname
-\groupname{Abteilungs-, KIT-Fakultäts-, Institutsbezeichnung}
+%\groupname{Institut für Informationssicherheit und Verlässlichkeit (KASTEL)}
 
 % Beginn der Präsentation
 
-\title[KIT-Beamer-Vorlage]{Präsentation mit \LaTeX{} Beamer im KIT-Design}
-\subtitle{entsprechend den Gestaltungsrichtlinien vom 1. August 2020} 
-\author[Erik Burger]{Dr.-Ing. Erik Burger}
+\title[Refaktorisierung einer Architekturanalyse für Vertraulichkeit]{Refaktorisierung einer Architekturanalyse für Vertraulichkeit}
+\subtitle{Praktikum Ingeneursgemäße Softwareentwicklung} 
+\author[Alina Valta]{Alina Valta}
 
-\date[10.\,8.\,2021]{10. August 2021}
+\date[10.\,03.\,2022]{10. März 2022}
 
 % Literatur 
  
@@ -39,246 +39,233 @@
 \tableofcontents
 \end{frame}
 
-\section{Erster Abschnitt}
+\section{Vertraulichkeitsanaylse}
+\begin{frame}{Vertraulichkeitsanayse}
+\begin{columns}[c]
+	\column{.25\textwidth}
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/Palladio-logo.png}
+	\vspace{0.05\textheight}
+	\column{.25\textwidth}
+	\centering
+	\includegraphics[width=0.9\textwidth]{images/confidentiality_profile.pdf}
+	%\includegraphics[width=0.9\textwidth]{images/WordCloud.png}
+	\vspace{0.05\textheight}
+	\column{.25\textwidth}
+	\texttt{\footnotesize dataSet(2).\\
+		parametersAndDataPair(8).\\
+		parameterSources(8,[return]).\\
+		dataTargets(8,[5,6,7,4]).}
+	\column{.25\textwidth}
+	\texttt{\tiny isInSecureWithRespectTo(guest)\\
++- accessibleParameters(guest,return(getId))\\
+| +- linksDataAccessibleBy(guest,wireless)\\
+| | +- linkAccessibleBy(guest,wireless)\\
+| | | +- linkLocation(wireless)
+| | | ‘- locationsAccessibleBy(guest)}
+\end{columns}
+\begin{columns}\centering
+	\column{.25\textwidth}
+	\centering
+	\textbf{Palladio Component Model}
+	\vspace{0.05\textheight}
+	\column{.25\textwidth}
+	\centering
+	\textbf{Confidentiality Model}
+	\column{.25\textwidth}
+	\centering
+	\textbf{Prolog Prädikate}
+	\column{.25\textwidth}
+	\centering
+	\textbf{Analyse Ergebnis}
+\end{columns}
+\begin{columns}\centering
+\column{.1\textwidth}
+\column{.25\textwidth}
+\centering
+$\longrightarrow$ \\
+Confidentiality4CBSE
+\column{.25\textwidth}
+\centering
+$\longrightarrow $\\
+PCM2Prolog
+\column{.25\textwidth}
+\centering
+$\longrightarrow$ \\
+\textcolor{gray}{Haskalladio}
+\column{.1\textwidth}
+\end{columns}
+\end{frame}	
 
-\subsection{Erster Unterabschnitt}
-\begin{frame}{Blöcke}{in den KIT-Farben}
+
+\begin{frame}{Vertraulichkeitsmodellierung}{Datenfluss}
+	\begin{itemize}
+		\item Daten werden in DataSets getrennt
+		\item Information Flow ordnet Datenfluss an Operationen DataSets zu
+		\begin{itemize}
+			\item Parameter
+			\item Rückgabewert
+			\item Aufruf der Funktion
+			\item Größe von Paramtern
+		\end{itemize}
+	\end{itemize}
+
+\end{frame}	
+\begin{frame}{Vertraulichkeitsmodellierung}{Ressourcen}
+ResourceContainer:
+	\begin{itemize}
+		\item Zusätzlich mögliche Verbindungen
+		\item geteilt Laufzeitumgebung
+	\end{itemize}
+LinkingResource:
+	\begin{itemize}
+		\item Welche Daten werden unverschüsselt übertragen?
+	\end{itemize}
+ResourceContainer + LinkingResource:
+\begin{itemize}
+	\item Welche Maßnahmen (Tamper-Protections) wurden getroffen um Ressourcen zu schützen
+\end{itemize}
+\end{frame}	
+\begin{frame}{Vertraulichkeitsmodellierung}{Angreifer}
+	\begin{itemize}
+		\item Welche DataSet dürfen bekannt sein?
+		\item Welche Tamper-Protections kann/will der Angreifer umgehen?
+		\item Wo hat der Angreifer Zugriff?
+	\end{itemize}
+\end{frame}	
+
+
+\section{Modell}
+\begin{frame}{Bisheriges Modell}{Profil-Mechanismus}
+\begin{columns}
+	\column{0.55\textwidth}
+Confidentiality Modell: 
+\begin{itemize}
+	\item Definiert Klassen zum Modellieren von DataSet, Maßnahmen, Angreifer, ...
+\end{itemize}
+Confidentiality-Profil:
+\begin{itemize}
+	\item Zusammenfassung von mehreren Stereotypen
+	\item Stereotyp erweitert eine oder mehrere PCM Klassen
+	\item Stereotyp hat Referenzen zu Elementen aus dem Confideniality-Modell
+\end{itemize}%
+$\rightarrow$ soll entfernt werden
+\column{0.35\textwidth}\centering
+\includegraphics[width=\textwidth]{images/stereotype.pdf}
+\end{columns}
+\end{frame}	
+
+\begin{frame}{Entfernen Profil-Mechanismus}
 	\begin{columns}
-		\column{.3\textwidth}
-		\begin{greenblock}{Greenblock}
-			Standard (\texttt{block})
-        \end{greenblock}
-		\column{.3\textwidth}
-		\begin{blueblock}{Blueblock}
-			= \texttt{exampleblock}
-        \end{blueblock}
-		\column{.3\textwidth}
-		\begin{redblock}{Redblock}
-			= \texttt{alertblock}
-        \end{redblock}
-	\end{columns}
-	\begin{columns}
-		\column{.3\textwidth}
-        \begin{brownblock}{Brownblock}
-        \end{brownblock}
-		\column{.3\textwidth}
-        \begin{purpleblock}{Purpleblock}
-        \end{purpleblock}
-		\column{.3\textwidth}
-        \begin{cyanblock}{Cyanblock}
-        \end{cyanblock}
-	\end{columns}
-	\begin{columns}
-		\column{.3\textwidth}
-        \begin{yellowblock}{Yellowblock}
-        \end{yellowblock}
-		\column{.3\textwidth}
-        \begin{lightgreenblock}{Lightgreenblock}
-        \end{lightgreenblock}
-		\column{.3\textwidth}
-        \begin{orangeblock}{Orangeblock}
-        \end{orangeblock}
-	\end{columns}
-	\begin{columns}
-		\column{.3\textwidth}
-        \begin{grayblock}{Grayblock}
-        \end{grayblock}
-		\column{.3\textwidth}
-		\begin{contentblock}{Contentblock}
-			(farblos)
-		\end{contentblock}
-		\column{.3\textwidth}
+		\column{0.4\textwidth}\centering
+	\includegraphics[width=\textwidth]{images/stereotype.pdf}
+	\column{0.1\textwidth}\centering
+	$\rightarrow$
+	\column{0.5\textwidth}\centering
+	\includegraphics[width=\textwidth]{images/location_tamperprotection.pdf}
 	\end{columns}
 \end{frame}
-	  
-\subsection{Zweiter Unterabschnitt}
-\begin{frame}{Auflistungen}
-	Text
-	\begin{itemize}
-		\item Auflistung\\ Umbruch
-		\item Auflistung
+\begin{frame}{Entfernen Profil-Mechanismus}
+	\begin{columns}
+		\column{0.5\textwidth}\centering
+		\includegraphics[width=\textwidth]{images/resoucrecontainer_linkingresouce.pdf}
+		\column{0.1\textwidth}\centering
+		$\rightarrow$
+		\column{0.3\textwidth}\centering
+		\includegraphics[width=\textwidth]{images/resources_container.pdf}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Bisheriges Modell}{Information Modellierung}
+		\begin{columns}
+		\column{0.55\textwidth}
 		\begin{itemize}
-			\item Auflistung
-			\item Auflistung
+			\item Zuordnung von DataSets und Datenflüssen an Operationen erfolgt über Strings\\
+			$\rightarrow$ implizite Referenz\\
+			$\rightarrow$ Verwechslungsgefahr bei gleichnamigen Parametern
+		\end{itemize}
+		$\rightarrow$ soll explizit modelliert werden
+		\column{0.35\textwidth}
+		\begin{center}
+			\includegraphics[width=0.9\textwidth]{images/ParameterAndDataPair.pdf}
+		\end{center}
+		\vspace{0.02\textheight}
+		\texttt{parameterSource = ''resquestData''}\\
+		\texttt{parameterSource = ''$\backslash$return''}\\
+		\texttt{parameterSource = ''$\backslash$call''}\\
+		\texttt{parameterSource = ''*''}\\
+		\texttt{parameterSource = ''sizeof(*)''}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}{Informations-Modellierung}
+	\begin{columns}
+		\column{0.25\textwidth}\centering
+		\includegraphics[width=\textwidth]{images/ParameterAndDataPair.pdf}
+		\column{0.1\textwidth}\centering
+		$\rightarrow$
+		\column{0.6\textwidth}\centering
+		\includegraphics[width=\textwidth]{images/information.pdf}
+	\end{columns}
+\end{frame}
+\section{PCM2Prolog}
+\begin{frame}{PCM2Prolog}
+	\begin{itemize}
+		\item xTend
+		\item Reflective-API wird verwendet um Entitäten auf Prolog Prädikate abzubilden
+		\item Filter bestimmt relevante Entitäten und Referenzen
+	\end{itemize}
+\vspace{0.05\textheight}
+	\begin{columns}
+		\column{0.6\textwidth}\centering
+		\includegraphics[width=0.9\textwidth]{images/pcm2prologUml.pdf}
+		\column{0.1\textwidth}\centering
+		$\rightarrow$
+		\column{0.35\textwidth}
+		\texttt{parametersAndDataPair(10).\\
+			parameterSources(10,[return]).\\
+			dataTargets(10,[5]).\\ \vspace{0.05\textheight}
+			dataSet(5).}
+	\end{columns}
+\end{frame}	
+\begin{frame}{Anpassungen PCM2Prolog}
+	\begin{itemize}
+		\item Dispatch-Methoden für Entitäten die nicht automatisch generiert werden können \\ \vspace{0.05\textheight}
+		\texttt{def dispatch String generateDeeplyCorrectly(EObject e) $\{$
+				return super.generateDeeply(e)
+		$\}$}\\
+		\texttt{def dispatch String generateDeeplyCorrectly(AbstractResourceProtection rp) $\{...\}$} \\ \vspace{0.05\textheight}
+		\item Ursprüngliche Stereotypen Referenzen müssen umgedreht werden
+		\begin{itemize}
+			\item Map<EObject,Set<String> > für jeden Stereotyp der auf PCM Komponenten angewandt werden kann
+			\item Beim Verarbeiten der neuen Klassen wird deren ID dem zur PCM Komponente gehörenden Set hinzugefügt
+			\item Nach dem alle Entitäten verarbeiten wurden $\rightarrow$ erzeuge Prädikate aus den Map Elementen
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-
-\section{Zweiter Abschnitt}
-
-\begin{frame}
-        Bei Frames ohne Titel wird die Kopfzeile nicht angezeigt, und  
-    der freie Platz kann für Inhalte genutzt werden.
-\end{frame}
-
-\begin{frame}[plain]
-    Bei Frames mit Option \texttt{[plain]} werden weder Kopf- noch Fußzeile angezeigt.
-\end{frame}
-
-\begin{frame}[t]{Beispielinhalt}
-    Bei Frames mit Option \texttt{[t]} werden die Inhalte nicht vertikal zentriert, sondern an der Oberkante begonnen.
-\end{frame}
-
-
-\begin{frame}{Beispielinhalt: Literatur}
-    Literaturzitat: \cite{klare2021jss}
+\section{Evaluierung}
+\begin{frame}{Evaluierung}
+	Modellierung der Beispiel Projekte \texttt{cloudscenario-minimized}\footnote{https://github.com/KASTEL-SCBS/Examples4SCBS/tree/master/bundles/edu.kit.kastel.scbs.cloudscenario-minimized} und \texttt{iflowexample}\footnote{https://github.com/KASTEL-SCBS/Examples4SCBS/tree/master/bundles/edu.kit.kastel.scbs.iflowexample} 5mit dem neuen Modell:
+	\begin{itemize}
+		\item Gleiche IDs verwenden
+	\end{itemize}
+	Automatischer Vergleich des Prolog Codes:
+	\begin{itemize}
+		\item Prolog Datei vorverarbeiten:
+		\begin{itemize}
+			\item Listen innerhalb Prolog Prädikate sortieren:
+			\texttt{prädikat(5, [''b'',''c'',''a'']).} wird zu \texttt{prädikat(5, [''a'',''b'',''c'']).}
+			\item Zeilen der Datei sortieren
+			\item Leerzeilen entfernen
+		\end{itemize}
+		\item Ausgabe mit \texttt{diff} vergleichen
+	\end{itemize}
+ $\rightarrow$ für diese Projekte möglich, aber nicht für alle möglichen Instanzen des ursprünglichen Modells
 \end{frame}
 
 \appendix
 \beginbackup
-
-\begin{frame}{Literatur}
-\begin{exampleblock}{Backup-Teil}
-    Folien, die nach \texttt{\textbackslash beginbackup} eingefügt werden, zählen nicht in die Gesamtzahl der Folien.
-\end{exampleblock}
-
-\printbibliography
-\end{frame}
-
-\section{Farben}
-%% ----------------------------------------
-%% | Test-Folie mit definierten Farben |
-%% ----------------------------------------
-\begin{frame}{Farbpalette}
-\tiny
-
-% GREEN
-	\colorbox{kit-green100}{kit-green100}
-	\colorbox{kit-green90}{kit-green90}
-	\colorbox{kit-green80}{kit-green80}
-	\colorbox{kit-green70}{kit-green70}
-	\colorbox{kit-green60}{kit-green60}
-	\colorbox{kit-green50}{kit-green50}
-	\colorbox{kit-green40}{kit-green40}
-	\colorbox{kit-green30}{kit-green30}
-	\colorbox{kit-green25}{kit-green25}
-	\colorbox{kit-green20}{kit-green20}
-	\colorbox{kit-green15}{kit-green15}
-	\colorbox{kit-green10}{kit-green10}
-	\colorbox{kit-green5}{kit-green5}
-
-% BLUE
-	\colorbox{kit-blue100}{kit-blue100}
-	\colorbox{kit-blue90}{kit-blue90}
-	\colorbox{kit-blue80}{kit-blue80}
-	\colorbox{kit-blue70}{kit-blue70}
-	\colorbox{kit-blue60}{kit-blue60}
-	\colorbox{kit-blue50}{kit-blue50}
-	\colorbox{kit-blue40}{kit-blue40}
-	\colorbox{kit-blue30}{kit-blue30}
-	\colorbox{kit-blue25}{kit-blue25}
-	\colorbox{kit-blue20}{kit-blue20}
-	\colorbox{kit-blue15}{kit-blue15}
-	\colorbox{kit-blue10}{kit-blue10}
-	\colorbox{kit-blue5}{kit-blue5}
-
-% RED
-	\colorbox{kit-red100}{kit-red100}
-	\colorbox{kit-red90}{kit-red90}
-	\colorbox{kit-red80}{kit-red80}
-	\colorbox{kit-red70}{kit-red70}
-	\colorbox{kit-red60}{kit-red60}
-	\colorbox{kit-red50}{kit-red50}
-	\colorbox{kit-red40}{kit-red40}
-	\colorbox{kit-red30}{kit-red30}
-	\colorbox{kit-red25}{kit-red25}
-	\colorbox{kit-red20}{kit-red20}
-	\colorbox{kit-red15}{kit-red15}
-	\colorbox{kit-red10}{kit-red10}
-	\colorbox{kit-red5}{kit-red5}
-
-% GREY
-	\colorbox{kit-gray100}{\color{white}kit-gray100}
-	\colorbox{kit-gray90}{\color{white}kit-gray90}
-	\colorbox{kit-gray80}{\color{white}kit-gray80}
-	\colorbox{kit-gray70}{\color{white}kit-gray70}
-	\colorbox{kit-gray60}{\color{white}kit-gray60}
-	\colorbox{kit-gray50}{\color{white}kit-gray50}
-	\colorbox{kit-gray40}{kit-gray40}
-	\colorbox{kit-gray30}{kit-gray30}
-	\colorbox{kit-gray25}{kit-gray25}
-	\colorbox{kit-gray20}{kit-gray20}
-	\colorbox{kit-gray15}{kit-gray15}
-	\colorbox{kit-gray10}{kit-gray10}
-	\colorbox{kit-gray5}{kit-gray5}
-
-% Orange
-	\colorbox{kit-orange100}{kit-orange100}
-	\colorbox{kit-orange90}{kit-orange90}
-	\colorbox{kit-orange80}{kit-orange80}
-	\colorbox{kit-orange70}{kit-orange70}
-	\colorbox{kit-orange60}{kit-orange60}
-	\colorbox{kit-orange50}{kit-orange50}
-	\colorbox{kit-orange40}{kit-orange40}
-	\colorbox{kit-orange30}{kit-orange30}
-	\colorbox{kit-orange25}{kit-orange25}
-	\colorbox{kit-orange20}{kit-orange20}
-	\colorbox{kit-orange15}{kit-orange15}
-	\colorbox{kit-orange10}{kit-orange10}
-	\colorbox{kit-orange5}{kit-orange5}
-
-% lightgreen
-	\colorbox{kit-lightgreen100}{kit-lightgreen100}
-	\colorbox{kit-lightgreen90}{kit-lightgreen90}
-	\colorbox{kit-lightgreen80}{kit-lightgreen80}
-	\colorbox{kit-lightgreen70}{kit-lightgreen70}
-	\colorbox{kit-lightgreen60}{kit-lightgreen60}
-	\colorbox{kit-lightgreen50}{kit-lightgreen50}
-	\colorbox{kit-lightgreen40}{kit-lightgreen40}
-	\colorbox{kit-lightgreen30}{kit-lightgreen30}
-	\colorbox{kit-lightgreen25}{kit-lightgreen25}
-	\colorbox{kit-lightgreen20}{kit-lightgreen20}
-	\colorbox{kit-lightgreen15}{kit-lightgreen15}
-	\colorbox{kit-lightgreen10}{kit-lightgreen10}
-	\colorbox{kit-lightgreen5}{kit-lightgreen5}
-
-% Brown
-	\colorbox{kit-brown100}{kit-brown100}
-	\colorbox{kit-brown90}{kit-brown90}
-	\colorbox{kit-brown80}{kit-brown80}
-	\colorbox{kit-brown70}{kit-brown70}
-	\colorbox{kit-brown60}{kit-brown60}
-	\colorbox{kit-brown50}{kit-brown50}
-	\colorbox{kit-brown40}{kit-brown40}
-	\colorbox{kit-brown30}{kit-brown30}
-	\colorbox{kit-brown25}{kit-brown25}
-	\colorbox{kit-brown20}{kit-brown20}
-	\colorbox{kit-brown15}{kit-brown15}
-	\colorbox{kit-brown10}{kit-brown10}
-	\colorbox{kit-brown5}{kit-brown5}
-
-% Purple
-	\colorbox{kit-purple100}{kit-purple100}
-	\colorbox{kit-purple90}{kit-purple90}
-	\colorbox{kit-purple80}{kit-purple80}
-	\colorbox{kit-purple70}{kit-purple70}
-	\colorbox{kit-purple60}{kit-purple60}
-	\colorbox{kit-purple50}{kit-purple50}
-	\colorbox{kit-purple40}{kit-purple40}
-	\colorbox{kit-purple30}{kit-purple30}
-	\colorbox{kit-purple25}{kit-purple25}
-	\colorbox{kit-purple20}{kit-purple20}
-	\colorbox{kit-purple15}{kit-purple15}
-	\colorbox{kit-purple10}{kit-purple10}
-	\colorbox{kit-purple5}{kit-purple5}
-
-% Cyan
-	\colorbox{kit-cyan100}{kit-cyan100}
-	\colorbox{kit-cyan90}{kit-cyan90}
-	\colorbox{kit-cyan80}{kit-cyan80}
-	\colorbox{kit-cyan70}{kit-cyan70}
-	\colorbox{kit-cyan60}{kit-cyan60}
-	\colorbox{kit-cyan50}{kit-cyan50}
-	\colorbox{kit-cyan40}{kit-cyan40}
-	\colorbox{kit-cyan30}{kit-cyan30}
-	\colorbox{kit-cyan25}{kit-cyan25}
-	\colorbox{kit-cyan20}{kit-cyan20}
-	\colorbox{kit-cyan15}{kit-cyan15}
-	\colorbox{kit-cyan10}{kit-cyan10}
-	\colorbox{kit-cyan5}{kit-cyan5}
-		
-\end{frame}
-%% ----------------------------------------
+ %% ----------------------------------------
 %% | /Test-Folie mit definierten Farben |
 %% ----------------------------------------
 \backupend
