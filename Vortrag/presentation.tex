@@ -18,7 +18,7 @@
 % Beginn der Präsentation
 
 \title[Refaktorisierung einer Architekturanalyse für Vertraulichkeit]{Refaktorisierung einer Architekturanalyse für Vertraulichkeit}
-\subtitle{Praktikum Ingeneursgemäße Softwareentwicklung} 
+\subtitle{Praktikum Ingeneursgemäße Softwareentwicklung \hspace{5cm}Betreuer: Frederik Reiche} 
 \author[Alina Valta]{Alina Valta}
 
 \date[10.\,03.\,2022]{10. März 2022}
@@ -53,16 +53,13 @@
 	\includegraphics[width=0.7\textwidth]{images/CBSE_example.png}
 	\end{columns}
 \vspace{0.05\textheight}
-	Vertraulichkeitsanalyse:
+	Vertraulichkeitsanalyse (\cite{kramer2017model})
 	\begin{itemize}
 		\item Vertrauliche Daten überschreiten Komponenten-Grenzen
 		\item Probleme auf Architekturebene erkennen
 	\end{itemize}
 \vspace{0.05\textheight}
-$\Rightarrow$ kompositorische Analyse notwendig:
-\begin{itemize}
-	\item Architekturanalyse
-\end{itemize}
+$\Rightarrow$ kompositorische Analyse notwendig
 \end{frame}
 
 \begin{frame}{Vertraulichkeitsanalyse}{Architekturebene}
@@ -127,13 +124,13 @@ $\longrightarrow$ \\
 
 \begin{frame}{Vertraulichkeitsmodellierung}{Datenfluss}
 
-	Dataset
+	DataSet
 	\begin{itemize}
 		\item Menge an Ein- und Ausgabedaten von Komponenten
 		\item Trennung nach Benutzergruppen, Zweck der Informationen, ...
 	\end{itemize}
 	\vspace{0.05\textheight}
-	Information Flow
+	InformationFlow
 		\begin{itemize}
 			\item Ordnet Daten DataSets zu
 			\item Art der Daten:
@@ -163,7 +160,7 @@ ConnectionType
 \vspace{0.05\textheight}
 SharingType
 \begin{itemize}
-	\item Laufen auf dem ResoureContainer noch andere Programme?
+	\item Laufen auf dem ResourceContainer noch andere Programme?
 \end{itemize}
 \vspace{0.05\textheight}
 Encryption
@@ -174,39 +171,28 @@ Encryption
 \end{columns}
 \end{frame}	
 
-\begin{frame}{Vertraulichkeitsmodellierung}{Maßnahmen}
-	\begin{columns}
-		\column{0.4\textwidth}
+\begin{frame}{Vertraulichkeitsmodellierung}{Maßnahmen und Angreifer}
+	%\begin{columns}
+		%\column{0.4\textwidth}
 		Location
 		\begin{itemize}
 			\item Geographische Orte oder Sicherheitslevel
 		\end{itemize}
 		\vspace{0.05\textheight}
-		Tamperprotection
+		TamperProtection
 		\begin{itemize}
 			\item Maßnahmen gegen Manipulation
-			\item Siegel, Zugangskontrollen, ...
 		\end{itemize}
-		\column{0.55\textwidth}
-		\includegraphics[width=0.9\textwidth]{images/TamperProtectionImage.png}
-	\end{columns}
-\end{frame}	
-
-\begin{frame}{Vertraulichkeitsmodellierung}{Angreifer}
-	\begin{columns}
-	\column{0.45\textwidth}
+	\vspace{0.05\textheight}
 	Angreifer und Benutzer des Systems
 	\begin{itemize}
-		\item Welche DataSet dürfen bekannt sein?
-		\item Welche Tamper-Protections kann/will der Angreifer umgehen?
-		\item Wo hat der Angreifer Zugriff?
+		\item Welche DataSets dürfen bekannt sein?
+		\item Welche TamperProtections kann/will der Angreifer umgehen?
+		\item Zu welchen Locations hat der Angreifer Zugriff?
 	\end{itemize}
-	\column{0.5\textwidth}\centering
-	\begin{figure}
-			\includegraphics[width=0.6\textwidth]{images/angreifer_example.png}
-			\caption{Beispiel für Angreifer/User}
-	\end{figure}
-	\end{columns}
+	%	\column{0.55\textwidth}
+	%	\includegraphics[width=0.9\textwidth]{images/TamperProtectionImage.png}
+	%\end{columns}
 \end{frame}	
 
 \section{Entfernen Profil-Mechanismus}
@@ -218,71 +204,49 @@ Confidentiality Modell:
 	\item Definiert Klassen zum Modellieren von DataSet, Maßnahmen, Angreifer, ...
 \end{itemize}
 \vspace{0.05\textheight}
-Confidentiality-Profil:
+Confidentiality Profil:
 \begin{itemize}
 	\item Verbindet PCM Elemente und Confidentiality Modell
 	\item Zusammenfassung von mehreren Stereotypen
 	\begin{itemize}
 		\item Stereotyp erweitert eine oder mehrere PCM Klassen
-		\item Stereotyp hat Referenzen zu Elementen aus dem Confideniality-Modell
+		\item Stereotyp hat Referenzen zu Elementen aus dem Confidentiality Modell
 	\end{itemize}
 	
 \end{itemize}%
-$\Rightarrow$ Problemen mit Eclipse und unübersichtlich
-\column{0.35\textwidth}\centering
+$\Rightarrow$ Probleme mit Eclipse und unübersichtlich
+\column{0.02\textwidth}\centering
+\only<2->{\Large$\Rightarrow$}
+\column{0.35\textwidth}
+\only<1>{
 \begin{figure}
-\includegraphics[width=\textwidth]{images/stereotype.pdf}
+\includegraphics[width=\textwidth]{images/repsoitory_stereotype.pdf}
 		\caption{Beispiel Stereotyp}
 \end{figure}
+}
+\only<2->{
+\textbf{Lösung:} Stereotypen ersetzen
+\begin{itemize}
+	\item Neue Modell Klassen
+	\item Existierende Klassen erweitern
+	\item Referenz zu PCM Elementen
+\end{itemize}
+}
 \end{columns}
 \end{frame}	
-
-\begin{frame}{Entfernen Profil-Mechanismus}{Location und Tamperprotection}
+\begin{frame}{Entfernen Profil-Mechanismus}{Beispiel InformationFlow}
 	\begin{columns}
 		\column{0.4\textwidth}\centering
-		\begin{figure}
-		\includegraphics[width=\textwidth]{images/stereotype.pdf}
-		\caption{Stereotyp LocationAndTemperprotection}
-	\end{figure}
-	\column{0.1\textwidth}\centering
-	$\rightarrow$
-	\column{0.5\textwidth}\centering
-	\begin{figure}
-	\includegraphics[width=0.8\textwidth]{images/location_tamperprotection.pdf}
-	\caption{Modell nach entfernen des Stereotyps}
-	\end{figure}
-	\end{columns}
-\end{frame}
-\begin{frame}{Entfernen Profil-Mechanismus}{Encrpytion, ConnectionType und SharingType}
-	\begin{columns}
-		\column{0.45\textwidth}\centering
-		\begin{figure}
-			\includegraphics[width=\textwidth]{images/resoucrecontainer_linkingresouce.pdf}
-			\caption{Stereotypen im ursprünglichen Modell}
-		\end{figure}
-		\column{0.05\textwidth}\centering
-		$\rightarrow$
-		\column{0.4\textwidth}\centering
-		\begin{figure}
-			\includegraphics[width=0.65\textwidth]{images/resources_container.pdf}
-			\caption{Modell nach entfernen der Stereotypen}
-		\end{figure}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{Entfernen Profil-Mechanismus}{InformationFlow}
-	\begin{columns}
-		\column{0.45\textwidth}\centering
 		\begin{figure}
 			\includegraphics[width=\textwidth]{images/repsoitory_stereotype.pdf}
-			\caption{Information Flow Stereotyp kann auf Signaturen und Interfaces angewandt werden}
+			\caption{InformationFlow Stereotyp kann auf Signaturen und Interfaces angewandt werden}
 		\end{figure}
 		\column{0.05\textwidth}\centering
-		$\rightarrow$
-		\column{0.4\textwidth}\centering
+		\LARGE{$\rightarrow$}
+		\column{0.5\textwidth}\centering
 		\begin{figure}
 			\includegraphics[width=\textwidth]{images/repository.pdf}
-			\caption{Modell nach entfernen des Stereotyps \linebreak Information Klasse ersetzt ParameterAndDataPair}
+			\caption{Modell nach Entfernen des Stereotyps \linebreak Information Klasse ersetzt ParameterAndDataPair}
 		\end{figure}
 	\end{columns}
 \end{frame}
@@ -293,9 +257,9 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 		\column{0.55\textwidth}
 		Modellieren der Ein- und Ausgabedaten von Komponenten
 		\begin{itemize}
-			\item Zuordnung von Datasets und Daten einer Operation erfolgt über Strings
+			\item Zuordnung von DataSets und Daten einer Operation erfolgt über Strings
 			\begin{itemize}
-				\item \texttt{  ''resquestData''}
+				\item \texttt{  ''requestData''}
 				\item \texttt{  ''$\backslash$return''}
 				\item \texttt{  ''$\backslash$call''}
 				\item \texttt{  ''*''}
@@ -313,7 +277,7 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 		\begin{center}
 			\begin{figure}
 				\includegraphics[width=0.7\textwidth]{images/ParameterAndDataPair.pdf}
-				\caption{Zuordnung von Daten und Datasets über Strings im ursprünglichen Modell}
+				\caption{Zuordnung von Daten und DataSets über Strings im ursprünglichen Modell}
 			\end{figure}
 		\end{center}
 		\vspace{0.02\textheight}
@@ -326,20 +290,20 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 		\column{0.3\textwidth}\centering
 		\begin{figure}
 			\includegraphics[width=0.9\textwidth]{images/ParameterAndDataPair.pdf}
-			\caption{Zuordnung von Daten und Datasets über Strings im ursprünglichen Modell}
+			\caption{Zuordnung von Daten und DataSets über Strings im ursprünglichen Modell}
 		\end{figure}
 		\column{0.05\textwidth}\centering
-		$\rightarrow$
+		\LARGE{$\rightarrow$}
 		\column{0.6\textwidth}\centering
 		\begin{figure}
-			\includegraphics[width=0.8\textwidth]{images/information.pdf}
+			\includegraphics[width=\textwidth]{images/information.pdf}
 			\caption{Modellierung der Information als eigene Klassen im neuen Modell}
 		\end{figure}
 	\end{columns}
 \end{frame}
 
 \section{PCM2Prolog}
-\begin{frame}{PCM2Prolog}{Modell-Instanz zu Prolog Code}
+\begin{frame}{PCM2Prolog}{Modellinstanz zu Prolog Code}
 	\begin{itemize}
 		\item Geschrieben in Xtend
 		\item Reflective-API wird verwendet um Entitäten auf Prolog Prädikate abzubilden
@@ -347,20 +311,20 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 	\end{itemize}
 \vspace{0.05\textheight}	
 	\begin{columns}
-		\column{0.45\textwidth}\centering
+		\column{0.5\textwidth}\centering
 		\begin{figure}
 			\includegraphics[width=\textwidth]{images/pcm2prologUml.pdf}
-			\caption{Beispiel Modell-Instanz \linebreak Filter Entitäten: ParameterAndDataPair, DataSet \linebreak Filter Referenzen: id, dataTargets}
+			\caption{Beispiel Modellinstanz \linebreak Filter Entitäten: ParameterAndDataPair, DataSet \linebreak Filter Referenzen: id, dataTargets}
 		\end{figure}
-		\column{0.1\textwidth}\centering
-		$\rightarrow$
+		\column{0.05\textwidth}\centering
+		\LARGE{$\rightarrow$}
 		\column{0.35\textwidth}
 		\begin{figure}\raggedright 
 		\texttt{parametersAndDataPair(10).\\
 			parameterSources(10,[return]).\\
 			dataTargets(10,[5]).\\ \vspace{0.025\textheight}
 			dataSet(5).}
-		\caption{Prolog Prädikaten für diese Modell-Instanz}
+		\caption{Prolog Prädikate für diese Modell-Instanz}
 		\end{figure}
 	\end{columns}
 \end{frame}	
@@ -368,7 +332,7 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 	Änderungen des Modells sollen sich nicht auf den Prolog Code auswirken
 	\vspace{0.05\textheight}
 	\begin{itemize}
-		\item Dispatch-Methoden für Entitäten die nicht automatisch generiert werden können \\ \vspace{0.025\textheight}
+		\item Dispatch-Methoden für Entitäten, die nicht automatisch generiert werden können \\ \vspace{0.025\textheight}
 		\texttt{def dispatch String generateDeeplyCorrectly(EObject e) $\{$
 				return super.generateDeeply(e)
 		$\}$}\\
@@ -380,9 +344,9 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 			\vspace{0.02\textheight}
 			\item Map für jeden früheren Stereotyp
 			\begin{itemize}
-				\item Key: PCM Element, Values: Set an Ids
+				\item Key: PCM Element, Value: Set an Ids
 			\end{itemize}
-			\item Beim Verarbeiten der Confidenitality Klassen wird die Map gefüllt
+			\item Beim Verarbeiten der Confidentiality Klassen wird die Map gefüllt
 			\item Am Ende: erzeuge Prädikate aus den Map Elementen
 		\end{itemize}
 	\end{itemize}
@@ -391,15 +355,15 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 \begin{frame}{Evaluierung}{Automatisch Überprüfung der Ergebnisse}
 	Modellierung der Beispiel Projekte mit dem neuen Modell:
 	\begin{itemize}
-		\item Gleiche IDs verwenden
+		\item Gleiche Ids verwenden
 	\end{itemize}
 \vspace{0.05\textheight}
 	Automatischer Vergleich des Prolog Codes:
 	\begin{itemize}
 		\item Prolog Datei vorverarbeiten:
 		\begin{itemize}
-			\item Listen innerhalb Prolog Prädikate sortieren:
-			\hspace{0.05\textwidth}\texttt{prädikatName(5, [''b'',''c'',''a'']).} wird zu \\ \hspace{0.408\textwidth} \texttt{prädikatName(5, [''a'',''b'',''c'']).}
+			\item Listen innerhalb von Prädikaten sortieren:
+			\hspace{0.05\textwidth}\texttt{prädikatName(5, [''b'',''c'',''a'']).} $\Rightarrow$ \\ \hspace{0.408\textwidth} \texttt{prädikatName(5, [''a'',''b'',''c'']).}
 			\item Zeilen der Datei sortieren
 			\item Leerzeilen entfernen
 		\end{itemize}
@@ -415,14 +379,51 @@ $\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 		Grenzen der Refaktorisierung
 		\begin{itemize}
 			\item Kommentare
-			\item Wiederverwendung von ParameterDataPairs und LocationAndTemperProtectionPairs
-			\item EntityName für neue Klassen
+			\item Wiederverwendung von Hilfsklassen (z.B. ParameterAndDataPairs) nicht mehr möglich\\ $\rightarrow$ PrologCode ändert sich
 		\end{itemize}
-	$\Rightarrow$ Keine exakte Refaktorisierung aber alle alten Instanzen können über kleine Änderungen ins neue Modell übertragen werden.
+	$\Rightarrow$ Bis auf die Wiederverwendung von Hilfsklassen können alle Modellinstanzen in das neue Modell übertragen werden, ohne dass der Prolog Code sich ändert.
+\end{frame}
+\section{Fazit}
+\begin{frame}{Fazit}
+	\begin{columns}[t]
+		\column{0.45\textwidth}
+		Problem:
+		\begin{itemize}
+			\item Profil-Mechanismus + Eclipse
+			\item String Referenzen
+		\end{itemize}
+		\column{0.45\textwidth}
+		Idee:
+			\begin{itemize}
+			\item Refaktorisierung des Modells
+		\end{itemize}
+	\end{columns}
+	\vspace{0.05\textheight}
+	\begin{columns}[t]
+		\column{0.45\textwidth}
+		Vorgehen:
+		\begin{itemize}
+		\item Neue Modell Klassen statt Stereotypen
+		\item Explizite Referenzen statt Strings
+		\item PCM2Prolog angepasst um Prolog Code nicht zu verändern
+		\end{itemize}
+	\column{0.45\textwidth}
+	Ergebnis:
+		\begin{itemize}
+		\item Erfolgreiche Refaktorisierung zweier Beispiel Projekte
+		\item Gleicher Prolog Code bis auf die Wiederverwendung von Hilfsklassen
+\end{itemize}
+\end{columns}
+	
 \end{frame}
 
+\begin{frame}{Referenzen}
+	\nocite{*}
+	\printbibliography
+\end{frame}
 \appendix
 \beginbackup
+
  %% ----------------------------------------
 %% | /Test-Folie mit definierten Farben |
 %% ----------------------------------------
