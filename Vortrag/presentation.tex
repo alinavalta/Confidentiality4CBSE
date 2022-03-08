@@ -28,19 +28,44 @@
 \usepackage[citestyle=authoryear,bibstyle=numeric,hyperref,backend=biber]{biblatex}
 \addbibresource{presentation.bib}
 \bibhang1em
-
 \begin{document}
 
+\renewcommand{\figurename}{Abb}
 %Titelseite
 \KITtitleframe
 
 %Inhaltsverzeichnis
-\begin{frame}{Inhaltsverzeichnis}
-\tableofcontents
+%\begin{frame}{Inhaltsverzeichnis}
+%\tableofcontents
+%\end{frame}
+
+\section{Vertraulichkeitsanalyse}
+
+\begin{frame}{Motivation}
+	\begin{columns}
+	\column{.45\textwidth}
+	Komponenten basierte Softwareentwicklung:
+	\begin{itemize}
+		\item Wiederverwendbare Komponenten
+		\item Komposition von Komponenten
+	\end{itemize}
+	\column{.5\textwidth}
+	\includegraphics[width=0.7\textwidth]{images/CBSE_example.png}
+	\end{columns}
+\vspace{0.05\textheight}
+	Vertraulichkeitsanalyse:
+	\begin{itemize}
+		\item Vertrauliche Daten überschreiten Komponenten-Grenzen
+		\item Probleme auf Architekturebene erkennen
+	\end{itemize}
+\vspace{0.05\textheight}
+$\Rightarrow$ kompositorische Analyse notwendig:
+\begin{itemize}
+	\item Architekturanalyse
+\end{itemize}
 \end{frame}
 
-\section{Vertraulichkeitsanaylse}
-\begin{frame}{Vertraulichkeitsanayse}
+\begin{frame}{Vertraulichkeitsanalyse}{Architekturebene}
 \begin{columns}[c]
 	\column{.25\textwidth}
 	\centering
@@ -84,58 +109,107 @@
 \column{.25\textwidth}
 \centering
 $\longrightarrow$ \\
-Confidentiality4CBSE
+Confidentiality4CBSE\footnotemark[1]
 \column{.25\textwidth}
 \centering
 $\longrightarrow $\\
-PCM2Prolog
+PCM2Prolog\footnotemark[2]
 \column{.25\textwidth}
 \centering
 $\longrightarrow$ \\
 \textcolor{gray}{Haskalladio}
 \column{.1\textwidth}
 \end{columns}
+\footnotetext[1]{https://github.com/KASTEL-SCBS/Confidentiality4CBSE}
+\footnotetext[2]{https://github.com/KASTEL-SCBS/PCM2Prolog}
 \end{frame}	
 
 
 \begin{frame}{Vertraulichkeitsmodellierung}{Datenfluss}
-	\begin{itemize}
-		\item Daten werden in DataSets getrennt
-		\item Information Flow ordnet Datenfluss an Operationen DataSets zu
-		\begin{itemize}
-			\item Parameter
-			\item Rückgabewert
-			\item Aufruf der Funktion
-			\item Größe von Paramtern
-		\end{itemize}
-	\end{itemize}
 
-\end{frame}	
+	Dataset
+	\begin{itemize}
+		\item Menge an Ein- und Ausgabedaten von Komponenten
+		\item Trennung nach Benutzergruppen, Zweck der Informationen, ...
+	\end{itemize}
+	\vspace{0.05\textheight}
+	Information Flow
+		\begin{itemize}
+			\item Ordnet Daten DataSets zu
+			\item Art der Daten:
+			\begin{columns}
+				\column{.05\textwidth}
+				\column{.25\textwidth}
+				\begin{itemize}
+					\item Parameter
+					\item Rückgabewert
+					\item Aufruf der Funktion
+					\item Größe von Parametern
+				\end{itemize}
+				\column{.65\textwidth}
+				\includegraphics[width=0.9\textwidth]{images/interface.png}
+				\vspace{0.05\textheight}
+			\end{columns}
+		\end{itemize}
+\end{frame}
+	
 \begin{frame}{Vertraulichkeitsmodellierung}{Ressourcen}
-ResourceContainer:
+	\begin{columns}
+		\column{0.5\textwidth}
+ConnectionType
 	\begin{itemize}
-		\item Zusätzlich mögliche Verbindungen
-		\item geteilt Laufzeitumgebung
+		\item Hat ein ResourceContainer zusätzlich mögliche Verbindungen?
 	\end{itemize}
-LinkingResource:
-	\begin{itemize}
-		\item Welche Daten werden unverschüsselt übertragen?
-	\end{itemize}
-ResourceContainer + LinkingResource:
+\vspace{0.05\textheight}
+SharingType
 \begin{itemize}
-	\item Welche Maßnahmen (Tamper-Protections) wurden getroffen um Ressourcen zu schützen
+	\item Laufen auf dem ResoureContainer noch andere Programme?
 \end{itemize}
+\vspace{0.05\textheight}
+Encryption
+\begin{itemize}
+	\item Werden Daten unverschlüsselt übertragen?
+\end{itemize}
+\column{0.45\textwidth}
+\end{columns}
 \end{frame}	
+
+\begin{frame}{Vertraulichkeitsmodellierung}{Maßnahmen}
+	\begin{columns}
+		\column{0.4\textwidth}
+		Location
+		\begin{itemize}
+			\item Geographische Orte oder Sicherheitslevel
+		\end{itemize}
+		\vspace{0.05\textheight}
+		Tamperprotection
+		\begin{itemize}
+			\item Maßnahmen gegen Manipulation
+			\item Siegel, Zugangskontrollen, ...
+		\end{itemize}
+		\column{0.55\textwidth}
+		\includegraphics[width=0.9\textwidth]{images/TamperProtectionImage.png}
+	\end{columns}
+\end{frame}	
+
 \begin{frame}{Vertraulichkeitsmodellierung}{Angreifer}
+	\begin{columns}
+	\column{0.45\textwidth}
+	Angreifer und Benutzer des Systems
 	\begin{itemize}
 		\item Welche DataSet dürfen bekannt sein?
 		\item Welche Tamper-Protections kann/will der Angreifer umgehen?
 		\item Wo hat der Angreifer Zugriff?
 	\end{itemize}
+	\column{0.5\textwidth}\centering
+	\begin{figure}
+			\includegraphics[width=0.6\textwidth]{images/angreifer_example.png}
+			\caption{Beispiel für Angreifer/User}
+	\end{figure}
+	\end{columns}
 \end{frame}	
 
-
-\section{Modell}
+\section{Entfernen Profil-Mechanismus}
 \begin{frame}{Bisheriges Modell}{Profil-Mechanismus}
 \begin{columns}
 	\column{0.55\textwidth}
@@ -143,124 +217,208 @@ Confidentiality Modell:
 \begin{itemize}
 	\item Definiert Klassen zum Modellieren von DataSet, Maßnahmen, Angreifer, ...
 \end{itemize}
+\vspace{0.05\textheight}
 Confidentiality-Profil:
 \begin{itemize}
+	\item Verbindet PCM Elemente und Confidentiality Modell
 	\item Zusammenfassung von mehreren Stereotypen
-	\item Stereotyp erweitert eine oder mehrere PCM Klassen
-	\item Stereotyp hat Referenzen zu Elementen aus dem Confideniality-Modell
+	\begin{itemize}
+		\item Stereotyp erweitert eine oder mehrere PCM Klassen
+		\item Stereotyp hat Referenzen zu Elementen aus dem Confideniality-Modell
+	\end{itemize}
+	
 \end{itemize}%
-$\rightarrow$ soll entfernt werden
+$\Rightarrow$ Problemen mit Eclipse und unübersichtlich
 \column{0.35\textwidth}\centering
+\begin{figure}
 \includegraphics[width=\textwidth]{images/stereotype.pdf}
+		\caption{Beispiel Stereotyp}
+\end{figure}
 \end{columns}
 \end{frame}	
 
-\begin{frame}{Entfernen Profil-Mechanismus}
+\begin{frame}{Entfernen Profil-Mechanismus}{Location und Tamperprotection}
 	\begin{columns}
 		\column{0.4\textwidth}\centering
-	\includegraphics[width=\textwidth]{images/stereotype.pdf}
+		\begin{figure}
+		\includegraphics[width=\textwidth]{images/stereotype.pdf}
+		\caption{Stereotyp LocationAndTemperprotection}
+	\end{figure}
 	\column{0.1\textwidth}\centering
 	$\rightarrow$
 	\column{0.5\textwidth}\centering
-	\includegraphics[width=\textwidth]{images/location_tamperprotection.pdf}
+	\begin{figure}
+	\includegraphics[width=0.8\textwidth]{images/location_tamperprotection.pdf}
+	\caption{Modell nach entfernen des Stereotyps}
+	\end{figure}
 	\end{columns}
 \end{frame}
-\begin{frame}{Entfernen Profil-Mechanismus}
+\begin{frame}{Entfernen Profil-Mechanismus}{Encrpytion, ConnectionType und SharingType}
 	\begin{columns}
-		\column{0.5\textwidth}\centering
-		\includegraphics[width=\textwidth]{images/resoucrecontainer_linkingresouce.pdf}
-		\column{0.1\textwidth}\centering
+		\column{0.45\textwidth}\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{images/resoucrecontainer_linkingresouce.pdf}
+			\caption{Stereotypen im ursprünglichen Modell}
+		\end{figure}
+		\column{0.05\textwidth}\centering
 		$\rightarrow$
-		\column{0.3\textwidth}\centering
-		\includegraphics[width=\textwidth]{images/resources_container.pdf}
+		\column{0.4\textwidth}\centering
+		\begin{figure}
+			\includegraphics[width=0.65\textwidth]{images/resources_container.pdf}
+			\caption{Modell nach entfernen der Stereotypen}
+		\end{figure}
 	\end{columns}
 \end{frame}
 
+\begin{frame}{Entfernen Profil-Mechanismus}{InformationFlow}
+	\begin{columns}
+		\column{0.45\textwidth}\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{images/repsoitory_stereotype.pdf}
+			\caption{Information Flow Stereotyp kann auf Signaturen und Interfaces angewandt werden}
+		\end{figure}
+		\column{0.05\textwidth}\centering
+		$\rightarrow$
+		\column{0.4\textwidth}\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{images/repository.pdf}
+			\caption{Modell nach entfernen des Stereotyps \linebreak Information Klasse ersetzt ParameterAndDataPair}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+\section{Information Modellierung}
 \begin{frame}{Bisheriges Modell}{Information Modellierung}
 		\begin{columns}
 		\column{0.55\textwidth}
+		Modellieren der Ein- und Ausgabedaten von Komponenten
 		\begin{itemize}
-			\item Zuordnung von DataSets und Datenflüssen an Operationen erfolgt über Strings\\
-			$\rightarrow$ implizite Referenz\\
-			$\rightarrow$ Verwechslungsgefahr bei gleichnamigen Parametern
+			\item Zuordnung von Datasets und Daten einer Operation erfolgt über Strings
+			\begin{itemize}
+				\item \texttt{  ''resquestData''}
+				\item \texttt{  ''$\backslash$return''}
+				\item \texttt{  ''$\backslash$call''}
+				\item \texttt{  ''*''}
+				\item \texttt{  ''sizeof(*)''}
+			\end{itemize}
+			\item Probleme:
+			\begin{itemize}
+				\item implizite Referenzen
+				\item Syntax muss bekannt sein
+				\item Verwechslungsgefahr bei gleichnamigen Parametern
+			\end{itemize}
 		\end{itemize}
-		$\rightarrow$ soll explizit modelliert werden
+		$\Rightarrow$ soll explizit modelliert werden
 		\column{0.35\textwidth}
 		\begin{center}
-			\includegraphics[width=0.9\textwidth]{images/ParameterAndDataPair.pdf}
+			\begin{figure}
+				\includegraphics[width=0.7\textwidth]{images/ParameterAndDataPair.pdf}
+				\caption{Zuordnung von Daten und Datasets über Strings im ursprünglichen Modell}
+			\end{figure}
 		\end{center}
 		\vspace{0.02\textheight}
-		\texttt{parameterSource = ''resquestData''}\\
-		\texttt{parameterSource = ''$\backslash$return''}\\
-		\texttt{parameterSource = ''$\backslash$call''}\\
-		\texttt{parameterSource = ''*''}\\
-		\texttt{parameterSource = ''sizeof(*)''}
+		
 	\end{columns}	
 \end{frame}
 
-\begin{frame}{Informations-Modellierung}
+\begin{frame}{Informations-Modellierung}{String durch Referenz ersetzten}
 	\begin{columns}
-		\column{0.25\textwidth}\centering
-		\includegraphics[width=\textwidth]{images/ParameterAndDataPair.pdf}
-		\column{0.1\textwidth}\centering
+		\column{0.3\textwidth}\centering
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{images/ParameterAndDataPair.pdf}
+			\caption{Zuordnung von Daten und Datasets über Strings im ursprünglichen Modell}
+		\end{figure}
+		\column{0.05\textwidth}\centering
 		$\rightarrow$
 		\column{0.6\textwidth}\centering
-		\includegraphics[width=\textwidth]{images/information.pdf}
+		\begin{figure}
+			\includegraphics[width=0.8\textwidth]{images/information.pdf}
+			\caption{Modellierung der Information als eigene Klassen im neuen Modell}
+		\end{figure}
 	\end{columns}
 \end{frame}
+
 \section{PCM2Prolog}
-\begin{frame}{PCM2Prolog}
+\begin{frame}{PCM2Prolog}{Modell-Instanz zu Prolog Code}
 	\begin{itemize}
-		\item xTend
+		\item Geschrieben in Xtend
 		\item Reflective-API wird verwendet um Entitäten auf Prolog Prädikate abzubilden
 		\item Filter bestimmt relevante Entitäten und Referenzen
 	\end{itemize}
-\vspace{0.05\textheight}
+\vspace{0.05\textheight}	
 	\begin{columns}
-		\column{0.6\textwidth}\centering
-		\includegraphics[width=0.9\textwidth]{images/pcm2prologUml.pdf}
+		\column{0.45\textwidth}\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{images/pcm2prologUml.pdf}
+			\caption{Beispiel Modell-Instanz \linebreak Filter Entitäten: ParameterAndDataPair, DataSet \linebreak Filter Referenzen: id, dataTargets}
+		\end{figure}
 		\column{0.1\textwidth}\centering
 		$\rightarrow$
 		\column{0.35\textwidth}
+		\begin{figure}\raggedright 
 		\texttt{parametersAndDataPair(10).\\
 			parameterSources(10,[return]).\\
-			dataTargets(10,[5]).\\ \vspace{0.05\textheight}
+			dataTargets(10,[5]).\\ \vspace{0.025\textheight}
 			dataSet(5).}
+		\caption{Prolog Prädikaten für diese Modell-Instanz}
+		\end{figure}
 	\end{columns}
 \end{frame}	
-\begin{frame}{Anpassungen PCM2Prolog}
+\begin{frame}{PCM2Prolog}{Anpassungen}
+	Änderungen des Modells sollen sich nicht auf den Prolog Code auswirken
+	\vspace{0.05\textheight}
 	\begin{itemize}
-		\item Dispatch-Methoden für Entitäten die nicht automatisch generiert werden können \\ \vspace{0.05\textheight}
+		\item Dispatch-Methoden für Entitäten die nicht automatisch generiert werden können \\ \vspace{0.025\textheight}
 		\texttt{def dispatch String generateDeeplyCorrectly(EObject e) $\{$
 				return super.generateDeeply(e)
 		$\}$}\\
-		\texttt{def dispatch String generateDeeplyCorrectly(AbstractResourceProtection rp) $\{...\}$} \\ \vspace{0.05\textheight}
-		\item Ursprüngliche Stereotypen Referenzen müssen umgedreht werden
+		\texttt{def dispatch String generateDeeplyCorrectly(AbstractResourceProtection rp) $\{...\}$} \\ \vspace{0.025\textheight}
+		\item Richtung der ursprüngliche Stereotypen Referenzen
 		\begin{itemize}
-			\item Map<EObject,Set<String> > für jeden Stereotyp der auf PCM Komponenten angewandt werden kann
-			\item Beim Verarbeiten der neuen Klassen wird deren ID dem zur PCM Komponente gehörenden Set hinzugefügt
-			\item Nach dem alle Entitäten verarbeiten wurden $\rightarrow$ erzeuge Prädikate aus den Map Elementen
+			\item \textit{vorher:} PCM $\rightarrow$ Modell (über Stereotyp) \\
+			\textit{jetzt:}\hspace{0.019\textwidth} Modell $\rightarrow$ PCM
+			\vspace{0.02\textheight}
+			\item Map für jeden früheren Stereotyp
+			\begin{itemize}
+				\item Key: PCM Element, Values: Set an Ids
+			\end{itemize}
+			\item Beim Verarbeiten der Confidenitality Klassen wird die Map gefüllt
+			\item Am Ende: erzeuge Prädikate aus den Map Elementen
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 \section{Evaluierung}
-\begin{frame}{Evaluierung}
-	Modellierung der Beispiel Projekte \texttt{cloudscenario-minimized}\footnote{https://github.com/KASTEL-SCBS/Examples4SCBS/tree/master/bundles/edu.kit.kastel.scbs.cloudscenario-minimized} und \texttt{iflowexample}\footnote{https://github.com/KASTEL-SCBS/Examples4SCBS/tree/master/bundles/edu.kit.kastel.scbs.iflowexample} 5mit dem neuen Modell:
+\begin{frame}{Evaluierung}{Automatisch Überprüfung der Ergebnisse}
+	Modellierung der Beispiel Projekte mit dem neuen Modell:
 	\begin{itemize}
 		\item Gleiche IDs verwenden
 	\end{itemize}
+\vspace{0.05\textheight}
 	Automatischer Vergleich des Prolog Codes:
 	\begin{itemize}
 		\item Prolog Datei vorverarbeiten:
 		\begin{itemize}
 			\item Listen innerhalb Prolog Prädikate sortieren:
-			\texttt{prädikat(5, [''b'',''c'',''a'']).} wird zu \texttt{prädikat(5, [''a'',''b'',''c'']).}
+			\hspace{0.05\textwidth}\texttt{prädikatName(5, [''b'',''c'',''a'']).} wird zu \\ \hspace{0.408\textwidth} \texttt{prädikatName(5, [''a'',''b'',''c'']).}
 			\item Zeilen der Datei sortieren
 			\item Leerzeilen entfernen
 		\end{itemize}
 		\item Ausgabe mit \texttt{diff} vergleichen
 	\end{itemize}
- $\rightarrow$ für diese Projekte möglich, aber nicht für alle möglichen Instanzen des ursprünglichen Modells
+\end{frame}
+\begin{frame}{Evaluierung}{Ergebnisse}
+		Projekte \texttt{cloudscenario-minimized}\footnote{https://github.com/KASTEL-SCBS/Examples4SCBS/tree/master/bundles/edu.kit.kastel.scbs.cloudscenario-minimized} und \texttt{iflowexample}\footnote{https://github.com/KASTEL-SCBS/Examples4SCBS/tree/master/bundles/edu.kit.kastel.scbs.iflowexample}:
+		\begin{itemize}
+			\item Gleicher Prolog Code konnte generiert werden
+		\end{itemize}
+		\vspace{0.05\textheight}
+		Grenzen der Refaktorisierung
+		\begin{itemize}
+			\item Kommentare
+			\item Wiederverwendung von ParameterDataPairs und LocationAndTemperProtectionPairs
+			\item EntityName für neue Klassen
+		\end{itemize}
+	$\Rightarrow$ Keine exakte Refaktorisierung aber alle alten Instanzen können über kleine Änderungen ins neue Modell übertragen werden.
 \end{frame}
 
 \appendix
