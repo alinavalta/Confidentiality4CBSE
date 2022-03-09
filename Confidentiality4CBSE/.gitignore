@@ -1,0 +1,22 @@
+# Eclipse/Java
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*.class
+**/src-gen/**
+**/src-gen-mod/**
+
+
+# Xtend
+xtend-gen/
+*._trace
+*.xtendbin
+
+# Maven
+bundles/*/target/*
+features/*/target/*
+releng/*/target/*
+releng/*/workspace/*

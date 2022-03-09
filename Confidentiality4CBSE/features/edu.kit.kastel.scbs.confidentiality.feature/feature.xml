@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.kit.kastel.scbs.confidentiality.feature"
+      label="confidentiality"
+      version="1.1.0.qualifier"
+      provider-name="SDQ">
+
+   <description url="https://github.com/KASTEL-SCBS/Confidentiality4CBSE">
+      Specify confidentiality during component-based software engineering
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [TODO Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [TODO Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="de.uka.ipd.sdq.identifier"/>
+      <import plugin="org.palladiosimulator.pcm"/>
+      <import plugin="de.uka.ipd.sdq.probfunction"/>
+      <import plugin="de.uka.ipd.sdq.stoex"/>
+      <import plugin="de.uka.ipd.sdq.units"/>
+      <import plugin="org.eclipse.ocl.pivot"/>
+      <import plugin="org.eclipse.xtext.xbase" version="2.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase.lib"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="de.uka.ipd.sdq.identifier.edit"/>
+      <import plugin="org.palladiosimulator.pcm.edit"/>
+      <import plugin="de.uka.ipd.sdq.probfunction.edit"/>
+      <import plugin="de.uka.ipd.sdq.stoex.edit"/>
+      <import plugin="de.uka.ipd.sdq.units.edit"/>
+      <import plugin="edu.kit.ipd.sdq.commons.util.java"/>
+      <import plugin="org.modelversioning.emfprofile" version="1.1.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="edu.kit.kastel.scbs.confidentialitymm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.kit.kastel.scbs.confidentialitymm.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.kit.kastel.scbs.pcmconfidentialityprofile"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

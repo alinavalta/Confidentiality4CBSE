@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/edu.kit.kastel.scbs.confidentiality.feature_1.1.0.qualifier.jar" id="edu.kit.kastel.scbs.confidentiality.feature" version="1.1.0.qualifier">
+      <category name="confidentiality"/>
+   </feature>
+   <feature id="edu.kit.kastel.scbs.confidentiality.feature.source" version="1.1.0.qualifier">
+      <category name="confidentiality"/>
+   </feature>
+   <category-def name="confidentiality" label="Confidentiality4CBSE">
+      <description>
+	Specify confidentiality during component-based software engineering 
+      </description>
+   </category-def>
+</site>

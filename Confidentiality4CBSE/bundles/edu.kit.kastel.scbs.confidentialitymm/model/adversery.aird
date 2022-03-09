@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_E2MkIJYqEeywL86K_Uj5Vg" selectedViews="_E4WgQJYqEeywL86K_Uj5Vg _E4tsoJYqEeywL86K_Uj5Vg _E4ylIJYqEeywL86K_Uj5Vg _E47vEJYqEeywL86K_Uj5Vg" version="14.5.1.202106111100">
+    <semanticResources>confidentiality.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore</semanticResources>
+    <semanticResources>platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore</semanticResources>
+    <semanticResources>platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore</semanticResources>
+    <semanticResources>platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore</semanticResources>
+    <semanticResources>platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore</semanticResources>
+    <semanticResources>confidentiality.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel</semanticResources>
+    <semanticResources>platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel</semanticResources>
+    <semanticResources>platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore</semanticResources>
+    <semanticResources>platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel</semanticResources>
+    <semanticResources>platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_E4WgQJYqEeywL86K_Uj5Vg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_F18w8JYqEeywL86K_Uj5Vg" name="adversary class diagram" repPath="#_F14fgJYqEeywL86K_Uj5Vg" changeId="819dafd6-ec4b-4c4b-aa5f-dd0a99877711">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+        <target xmi:type="ecore:EPackage" href="confidentiality.ecore#//adversary"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_E4tsoJYqEeywL86K_Uj5Vg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_E4ylIJYqEeywL86K_Uj5Vg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_E47vEJYqEeywL86K_Uj5Vg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']"/>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_F14fgJYqEeywL86K_Uj5Vg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_F19YAJYqEeywL86K_Uj5Vg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_F19YAZYqEeywL86K_Uj5Vg" type="Sirius" element="_F14fgJYqEeywL86K_Uj5Vg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_GMQ_MJYqEeywL86K_Uj5Vg" type="2003" element="_GMMtwJYqEeywL86K_Uj5Vg">
+          <children xmi:type="notation:Node" xmi:id="_GMQ_M5YqEeywL86K_Uj5Vg" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GMQ_NJYqEeywL86K_Uj5Vg" type="7004">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_GMQ_NZYqEeywL86K_Uj5Vg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_GMQ_NpYqEeywL86K_Uj5Vg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_GMQ_MZYqEeywL86K_Uj5Vg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GMQ_MpYqEeywL86K_Uj5Vg" x="82" y="110" height="43"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_GMQ_N5YqEeywL86K_Uj5Vg" type="2003" element="_GMNU0JYqEeywL86K_Uj5Vg">
+          <children xmi:type="notation:Node" xmi:id="_GMQ_OpYqEeywL86K_Uj5Vg" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GMQ_O5YqEeywL86K_Uj5Vg" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_GMRmQJYqEeywL86K_Uj5Vg" type="3010" element="_GMPKApYqEeywL86K_Uj5Vg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_GMRmQZYqEeywL86K_Uj5Vg" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_GMRmQpYqEeywL86K_Uj5Vg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_GMRmQ5YqEeywL86K_Uj5Vg" type="3010" element="_GMPxEJYqEeywL86K_Uj5Vg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_GMRmRJYqEeywL86K_Uj5Vg" fontColor="32768" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_GMRmRZYqEeywL86K_Uj5Vg"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_GMQ_PJYqEeywL86K_Uj5Vg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_GMQ_PZYqEeywL86K_Uj5Vg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_GMQ_OJYqEeywL86K_Uj5Vg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GMQ_OZYqEeywL86K_Uj5Vg" height="73"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_F19YApYqEeywL86K_Uj5Vg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_GMRmRpYqEeywL86K_Uj5Vg" type="4001" element="_GMPxEpYqEeywL86K_Uj5Vg" source="_GMQ_MJYqEeywL86K_Uj5Vg" target="_GMQ_N5YqEeywL86K_Uj5Vg">
+          <children xmi:type="notation:Node" xmi:id="_GMRmSpYqEeywL86K_Uj5Vg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GMRmS5YqEeywL86K_Uj5Vg" x="5" y="57"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_GMRmTJYqEeywL86K_Uj5Vg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GMRmTZYqEeywL86K_Uj5Vg" x="-3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_GMRmTpYqEeywL86K_Uj5Vg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GMRmT5YqEeywL86K_Uj5Vg" x="-8" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_GMRmR5YqEeywL86K_Uj5Vg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_GMRmSJYqEeywL86K_Uj5Vg" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GMRmSZYqEeywL86K_Uj5Vg" points="[0, -49, 0, 61]$[0, -88, 0, 22]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GMSNUJYqEeywL86K_Uj5Vg" id="(0.5,1.1951219512195121)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GMSNUZYqEeywL86K_Uj5Vg" id="(0.5,0.6901408450704225)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_F1_NMZYqEeywL86K_Uj5Vg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_F1_NMpYqEeywL86K_Uj5Vg">
+        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_GMQYIJYqEeywL86K_Uj5Vg" sourceArrow="FillDiamond" routingStyle="manhattan">
+          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_GMQYIZYqEeywL86K_Uj5Vg" showIcon="false" labelExpression="service:render">
+            <labelFormat>bold</labelFormat>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </centerLabelStyleDescription>
+          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_GMQYIpYqEeywL86K_Uj5Vg" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </endLabelStyleDescription>
+        </computedStyleDescriptions>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_GMMtwJYqEeywL86K_Uj5Vg" name="Adversaries" tooltipText="" outgoingEdges="_GMPxEpYqEeywL86K_Uj5Vg" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="confidentiality.ecore#//adversary/Adversaries"/>
+      <semanticElements xmi:type="ecore:EClass" href="confidentiality.ecore#//adversary/Adversaries"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_GMMtwZYqEeywL86K_Uj5Vg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+        <customFeatures>backgroundColor</customFeatures>
+        <customFeatures>foregroundColor</customFeatures>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_GMNU0JYqEeywL86K_Uj5Vg" name="Adversary" tooltipText="" incomingEdges="_GMPxEpYqEeywL86K_Uj5Vg" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="confidentiality.ecore#//adversary/Adversary"/>
+      <semanticElements xmi:type="ecore:EClass" href="confidentiality.ecore#//adversary/Adversary"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_GMNU0ZYqEeywL86K_Uj5Vg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+        <customFeatures>backgroundColor</customFeatures>
+        <customFeatures>foregroundColor</customFeatures>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_GMPKApYqEeywL86K_Uj5Vg" name=" mayKnowData : UnparameterizedDataIdentifying" tooltipText="">
+        <target xmi:type="ecore:EReference" href="confidentiality.ecore#//adversary/Adversary/mayKnowData"/>
+        <semanticElements xmi:type="ecore:EReference" href="confidentiality.ecore#//adversary/Adversary/mayKnowData"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_GMPKA5YqEeywL86K_Uj5Vg" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_GMPxEJYqEeywL86K_Uj5Vg" name=" mayTamperWith : AbstractResourceProtection" tooltipText="">
+        <target xmi:type="ecore:EReference" href="confidentiality.ecore#//adversary/Adversary/mayTamperWith"/>
+        <semanticElements xmi:type="ecore:EReference" href="confidentiality.ecore#//adversary/Adversary/mayTamperWith"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_GMPxEZYqEeywL86K_Uj5Vg" labelColor="0,128,0" labelAlignment="LEFT" color="114,159,207">
+          <customFeatures>labelColor</customFeatures>
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_GMPxEpYqEeywL86K_Uj5Vg" name="[1..*] adversaries" sourceNode="_GMMtwJYqEeywL86K_Uj5Vg" targetNode="_GMNU0JYqEeywL86K_Uj5Vg">
+      <target xmi:type="ecore:EReference" href="confidentiality.ecore#//adversary/Adversaries/adversaries"/>
+      <semanticElements xmi:type="ecore:EReference" href="confidentiality.ecore#//adversary/Adversaries/adversaries"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_GMQYI5YqEeywL86K_Uj5Vg" description="_GMQYIJYqEeywL86K_Uj5Vg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_GMQYJZYqEeywL86K_Uj5Vg" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_GMQYJJYqEeywL86K_Uj5Vg" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_F17i0JYqEeywL86K_Uj5Vg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']/@ownedRepresentationExtensions[name='Entities%20With%20Archetypes']/@layers[name='Archetypes']"/>
+    <target xmi:type="ecore:EPackage" href="confidentiality.ecore#//adversary"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
