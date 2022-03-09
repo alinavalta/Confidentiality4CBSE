@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.kit.kastel.scbs.confidentiality.adversary:Adversaries xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:edu.kit.kastel.scbs.confidentiality.adversary="http://edu.kit.kastel.scbs.confidentiality/adversary" xmlns:edu.kit.kastel.scbs.confidentiality.data="http://edu.kit.kastel.scbs.confidentiality/data" xmlns:edu.kit.kastel.scbs.confidentiality.resources="http://edu.kit.kastel.scbs.confidentiality/resources" id="_A5jBQJzjEeWvbrCzHVJijg" entityName="adversaries">
+  <adversaries id="_kHs7EMOFEeWst9mTsticNA" entityName="User">
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#__WYS5MOFEeWst9mTsticNA"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_9N5G9MOGEeWst9mTsticNA"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_W7aTtM5sEeWFJak7Wqvc0g"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_EZMjdM5xEeWFJak7Wqvc0g"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_FoQgpMOGEeWst9mTsticNA"/>
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" href="default.confidentiality#_RmAIsM6BEeWqSdNpnh9tmQ"/>
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:LinkingResourceProtection" href="default.confidentiality#_XwoCcM6CEeWqSdNpnh9tmQ"/>
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:LinkingResourceProtection" href="default.confidentiality#_txU5gM6CEeWqSdNpnh9tmQ"/>
+  </adversaries>
+  <adversaries id="_lU1ckMOFEeWst9mTsticNA" entityName="Airline">
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_9N5G9MOGEeWst9mTsticNA"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_W7aTtM5sEeWFJak7Wqvc0g"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_EZMjdM5xEeWFJak7Wqvc0g"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_FoQgpMOGEeWst9mTsticNA"/>
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" href="default.confidentiality#_-YubgM6AEeWqSdNpnh9tmQ"/>
+  </adversaries>
+  <adversaries id="_mQ9GkMOFEeWst9mTsticNA" entityName="TravelAgency">
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_W7aTtM5sEeWFJak7Wqvc0g"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" href="default.confidentiality#_FoQgpMOGEeWst9mTsticNA"/>
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" href="default.confidentiality#_QBclsM6BEeWqSdNpnh9tmQ"/>
+  </adversaries>
+</edu.kit.kastel.scbs.confidentiality.adversary:Adversaries>

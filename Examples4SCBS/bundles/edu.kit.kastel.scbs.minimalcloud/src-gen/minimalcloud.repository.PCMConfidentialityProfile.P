@@ -1,0 +1,64 @@
+
+/** BEGIN serviceParameterAddition, ID: '26', NAME: 'null' */
+description(26,'null','serviceParameterAddition').
+serviceParameters(26,[46]).
+/** END serviceParameterAddition, ID: '26', NAME: 'null' */
+
+
+/** BEGIN serviceParameterAddition, ID: '27', NAME: 'null' */
+description(27,'null','serviceParameterAddition').
+serviceParameters(27,[46]).
+/** END serviceParameterAddition, ID: '27', NAME: 'null' */
+
+
+/** BEGIN informationFlowParameter, ID: '26', NAME: 'null' */
+description(26,'null','informationFlowParameter').
+specificationParameters(26,[47,48]).
+/** END informationFlowParameter, ID: '26', NAME: 'null' */
+
+
+/** BEGIN informationFlowParameter, ID: '27', NAME: 'null' */
+description(27,'null','informationFlowParameter').
+specificationParameters(27,[47,48]).
+/** END informationFlowParameter, ID: '27', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '26', NAME: 'null' */
+parametersAndDataPairs(31,[49, 50]).
+parametersAndDataPairs(32,[49, 50]).
+parametersAndDataPairs(33,[49, 50]).
+parametersAndDataPairs(34,[49, 50]).
+/** END informationFlow, ID: '26', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '27', NAME: 'null' */
+parametersAndDataPairs(41,[49, 50]).
+parametersAndDataPairs(42,[49, 50]).
+parametersAndDataPairs(43,[49, 50]).
+parametersAndDataPairs(44,[49, 50]).
+/** END informationFlow, ID: '27', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '33', NAME: 'null' */
+description(33,'null','informationFlow').
+parametersAndDataPairs(33,[51]).
+/** END informationFlow, ID: '33', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '43', NAME: 'null' */
+description(43,'null','informationFlow').
+parametersAndDataPairs(43,[51]).
+/** END informationFlow, ID: '43', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '34', NAME: 'null' */
+description(34,'null','informationFlow').
+parametersAndDataPairs(34,[52]).
+/** END informationFlow, ID: '34', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '44', NAME: 'null' */
+description(44,'null','informationFlow').
+parametersAndDataPairs(44,[52]).
+/** END informationFlow, ID: '44', NAME: 'null' */
+

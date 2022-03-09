@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.kit.kastel.scbs.confidentiality:ConfidentialitySpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:edu.kit.kastel.scbs.confidentiality="http://edu.kit.kastel.scbs.confidentiality" xmlns:edu.kit.kastel.scbs.confidentiality.data="http://edu.kit.kastel.scbs.confidentiality/data" id="_OGRzwHaZEeaYKN4opFQqKQ">
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="MobilePhone" name="MobilePhone"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="AgencyServer" name="AgencyServer"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="AirlineServer" name="AirlineServer"/>
+  <parametersAndDataPairs id="retFlightOffersTA" name="getFlightOffersTA" dataTargets="MobilePhone AgencyServer AirlineServer">
+    <parameterSources>requestData</parameterSources>
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="retFlightOffersTP" name="getFlightOffersTP" dataTargets="MobilePhone AgencyServer AirlineServer">
+    <parameterSources>requestData</parameterSources>
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_0sjZ8HZtEeaE4tGRMtTb7A" name="declassifyCCDParam" dataTargets="MobilePhone">
+    <parameterSources>ccDetails</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_K_z1aHUVEeahddHrzGUY0w" name="declassifiedCCD" dataTargets="MobilePhone AirlineServer">
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="createRelease" name="confirmRelease" dataTargets="MobilePhone">
+    <parameterSources>airline</parameterSources>
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_lBZvAHUVEeahddHrzGUY0w" name="setCCD" dataTargets="MobilePhone">
+    <parameterSources>ccd</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_mxE15dTyEee-_bZGhm8PwA" name="setFlightOffers" dataTargets="AgencyServer AirlineServer MobilePhone">
+    <parameterSources>flights</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_xXdGx14958apl-X2sXGeDw" name="bookSelectedParam" dataTargets="MobilePhone AirlineServer AgencyServer">
+    <parameterSources>flightOffer</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_rAH3mHUSEeahddHrzGUY0w" name="bookSelectedConfirmation" dataTargets="MobilePhone AirlineServer AgencyServer">
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_TKA6RdTzEee-_bZGhm8PwA" name="confirmBooking" dataTargets="AgencyServer AirlineServer MobilePhone">
+    <parameterSources>offerId</parameterSources>
+    <parameterSources>airline</parameterSources>
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_xX8pQ149Eeapl-X2sXGeDw" name="bookFlightParam0" dataTargets="MobilePhone AirlineServer AgencyServer">
+    <parameterSources>offerId</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_xX8pQ149Eeapl-XCFGJDw" name="bookFlightParam1" dataTargets="MobilePhone AirlineServer">
+    <parameterSources>ccd_decl</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="_yFgwJmLuEeaH05QIQxp7GA" name="bookFlightConfirmation" dataTargets="MobilePhone AirlineServer">
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <parametersAndDataPairs id="payCommisionBindingParam" name="payCommision" dataTargets="AirlineServer AgencyServer">
+    <parameterSources>offerId</parameterSources>
+    <parameterSources>\result</parameterSources>
+  </parametersAndDataPairs>
+  <locations id="_RDKiA143Eeapl-X2sXGeDw" name="UserControlled"/>
+  <locations id="_Qo19g143Eeapl-X2sXGeDw" name="Airline"/>
+  <locations id="_QIELs143Eeapl-X2sXGeDw" name="TravelAgency"/>
+  <locations id="_TBvHg143Eeapl-X2sXGeDw" name="Street"/>
+  <locations id="_RrYYk143Eeapl-X2sXGeDw" name="CoffeShop"/>
+  <locations id="_RWixA143Eeapl-X2sXGeDw" name="Internet"/>
+  <locationsAndTamperProtectionsPairs id="_OGVeIHaZEeaYKN4opFQqKQ" name="UserControlled" locations="_RDKiA143Eeapl-X2sXGeDw"/>
+  <locationsAndTamperProtectionsPairs id="_OGqOQXaZEeaYKN4opFQqKQ" name="Airline" locations="_Qo19g143Eeapl-X2sXGeDw"/>
+  <locationsAndTamperProtectionsPairs id="_OGqOQ3aZEeaYKN4opFQqKQ" name="TravelAgency" locations="_QIELs143Eeapl-X2sXGeDw"/>
+  <locationsAndTamperProtectionsPairs id="_OGqORXaZEeaYKN4opFQqKQ" name="Street" locations="_TBvHg143Eeapl-X2sXGeDw"/>
+  <locationsAndTamperProtectionsPairs id="_OGqOR3aZEeaYKN4opFQqKQ" name="CoffeShop" locations="_RrYYk143Eeapl-X2sXGeDw"/>
+  <locationsAndTamperProtectionsPairs id="_OGqOSXaZEeaYKN4opFQqKQ" name="Internet" locations="_RWixA143Eeapl-X2sXGeDw"/>
+</edu.kit.kastel.scbs.confidentiality:ConfidentialitySpecification>

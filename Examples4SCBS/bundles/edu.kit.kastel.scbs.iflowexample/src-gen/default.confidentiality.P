@@ -1,0 +1,319 @@
+
+/** BEGIN confidentialitySpecification, ID: '1', NAME: 'ConfidentialitySpecification' */
+description(1,'ConfidentialitySpecification','confidentialitySpecification').
+confidentialitySpecification(1).
+dataIdentifier(1,[2,3,4,5,6,7]).
+dataSetMaps(1,[]).
+addedServiceParameters(1,[]).
+parametersAndDataPairs(1,[11,12,13,14,15,16,17,18,19,8,9,20,10]).
+specificationParameterAssignments(1,[]).
+specificationParameterEquations(1,[]).
+locations(1,[21,22,23,24,25,26]).
+tamperProtections(1,[]).
+locationsAndTamperProtectionsPairs(1,[27,28,29,30,31,32]).
+
+/** BEGIN dataSet, ID: '2', NAME: 'CreditCardInformation' */
+description(2,'CreditCardInformation','dataSet').
+dataSet(2).
+/** END dataSet, ID: '2', NAME: 'CreditCardInformation' */
+
+
+/** BEGIN dataSet, ID: '3', NAME: 'ComissionData' */
+description(3,'ComissionData','dataSet').
+dataSet(3).
+/** END dataSet, ID: '3', NAME: 'ComissionData' */
+
+
+/** BEGIN dataSet, ID: '4', NAME: 'TravelData' */
+description(4,'TravelData','dataSet').
+dataSet(4).
+/** END dataSet, ID: '4', NAME: 'TravelData' */
+
+
+/** BEGIN dataSet, ID: '5', NAME: 'CreditCardInformationDeclassified' */
+description(5,'CreditCardInformationDeclassified','dataSet').
+dataSet(5).
+/** END dataSet, ID: '5', NAME: 'CreditCardInformationDeclassified' */
+
+
+/** BEGIN dataSet, ID: '6', NAME: 'FlightOffer' */
+description(6,'FlightOffer','dataSet').
+dataSet(6).
+/** END dataSet, ID: '6', NAME: 'FlightOffer' */
+
+
+/** BEGIN dataSet, ID: '7', NAME: 'Selection' */
+description(7,'Selection','dataSet').
+dataSet(7).
+/** END dataSet, ID: '7', NAME: 'Selection' */
+
+/** BEGIN signatureInformationFlow, ID: '8', NAME: 'bookSelectedFlow' */
+description(8,'flightOfferParameter','parametersAndDataPair').
+parametersAndDataPair(8).
+parameterSources(8,[33]).
+dataTargets(8,[7,6,4]).
+/** END signatureInformationFlow, ID: '8', NAME: 'bookSelectedFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '34', NAME: 'BookingSelectionGetOffersFlow' */
+description(9,'requestDataParameter','parametersAndDataPair').
+parametersAndDataPair(9).
+parameterSources(9,[35]).
+dataTargets(9,[4]).
+/** END signatureInformationFlow, ID: '34', NAME: 'BookingSelectionGetOffersFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '36', NAME: 'bookFlightFlow' */
+description(10,'ccd_declassifiedParameter','parametersAndDataPair').
+parametersAndDataPair(10).
+parameterSources(10,[37]).
+dataTargets(10,[5]).
+description(11,'returnValue','parametersAndDataPair').
+parametersAndDataPair(11).
+parameterSources(11,[return]).
+dataTargets(11,[5,6,7,4]).
+description(12,'offerIdParameter','parametersAndDataPair').
+parametersAndDataPair(12).
+parameterSources(12,[38]).
+dataTargets(12,[6,7,4]).
+/** END signatureInformationFlow, ID: '36', NAME: 'bookFlightFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '39', NAME: 'getFlightOffersFlow' */
+description(13,'requestDataParameter','parametersAndDataPair').
+parametersAndDataPair(13).
+parameterSources(13,[35]).
+dataTargets(13,[4]).
+description(14,'returnValue','parametersAndDataPair').
+parametersAndDataPair(14).
+parameterSources(14,[return]).
+dataTargets(14,[6,4]).
+/** END signatureInformationFlow, ID: '39', NAME: 'getFlightOffersFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '40', NAME: 'setCreditCardFlow' */
+description(15,'creditCardParameter','parametersAndDataPair').
+parametersAndDataPair(15).
+parameterSources(15,[41]).
+dataTargets(15,[2]).
+/** END signatureInformationFlow, ID: '40', NAME: 'setCreditCardFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '42', NAME: 'releaseCCDFlow' */
+description(16,'airlineParameter','parametersAndDataPair').
+parametersAndDataPair(16).
+parameterSources(16,[43]).
+dataTargets(16,[6,7,4]).
+/** END signatureInformationFlow, ID: '42', NAME: 'releaseCCDFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '44', NAME: 'confirmReleaseFlow' */
+description(17,'airlineParameter','parametersAndDataPair').
+parametersAndDataPair(17).
+parameterSources(17,[43]).
+dataTargets(17,[6,7,4]).
+description(18,'creditCardParameter','parametersAndDataPair').
+parametersAndDataPair(18).
+parameterSources(18,[41]).
+dataTargets(18,[2]).
+/** END signatureInformationFlow, ID: '44', NAME: 'confirmReleaseFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '45', NAME: 'getSingleSelectionFlow' */
+description(19,'flightOffers','parametersAndDataPair').
+parametersAndDataPair(19).
+parameterSources(19,[46]).
+dataTargets(19,[6]).
+/** END signatureInformationFlow, ID: '45', NAME: 'getSingleSelectionFlow' */
+
+/** BEGIN signatureInformationFlow, ID: '47', NAME: 'setAvailableFlightsFlow' */
+description(20,'flightsParameter','parametersAndDataPair').
+parametersAndDataPair(20).
+parameterSources(20,[48]).
+dataTargets(20,[6]).
+/** END signatureInformationFlow, ID: '47', NAME: 'setAvailableFlightsFlow' */
+
+
+/** BEGIN location, ID: '21', NAME: 'TravelAgency' */
+description(21,'TravelAgency','location').
+location(21).
+/** END location, ID: '21', NAME: 'TravelAgency' */
+
+
+/** BEGIN location, ID: '22', NAME: 'Airline' */
+description(22,'Airline','location').
+location(22).
+/** END location, ID: '22', NAME: 'Airline' */
+
+
+/** BEGIN location, ID: '23', NAME: 'UserControlled' */
+description(23,'UserControlled','location').
+location(23).
+/** END location, ID: '23', NAME: 'UserControlled' */
+
+
+/** BEGIN location, ID: '24', NAME: 'Internet' */
+description(24,'Internet','location').
+location(24).
+/** END location, ID: '24', NAME: 'Internet' */
+
+
+/** BEGIN location, ID: '25', NAME: 'CoffeShop' */
+description(25,'CoffeShop','location').
+location(25).
+/** END location, ID: '25', NAME: 'CoffeShop' */
+
+
+/** BEGIN location, ID: '26', NAME: 'Street' */
+description(26,'Street','location').
+location(26).
+/** END location, ID: '26', NAME: 'Street' */
+
+
+/** BEGIN resourceContainerProtection, ID: '27', NAME: 'AirlineProtection' */
+description(27,'AirlineProtection','resourceContainerProtection').
+locationsAndTamperProtectionsPair(27).
+locations(27,[22]).
+tamperProtections(27,[]).
+/** END resourceContainerProtection, ID: '27', NAME: 'AirlineProtection' */
+
+
+/** BEGIN resourceContainerProtection, ID: '28', NAME: 'TravelAgencyProtection' */
+description(28,'TravelAgencyProtection','resourceContainerProtection').
+locationsAndTamperProtectionsPair(28).
+locations(28,[21]).
+tamperProtections(28,[]).
+/** END resourceContainerProtection, ID: '28', NAME: 'TravelAgencyProtection' */
+
+
+/** BEGIN resourceContainerProtection, ID: '29', NAME: 'UserControlledProtection' */
+description(29,'UserControlledProtection','resourceContainerProtection').
+locationsAndTamperProtectionsPair(29).
+locations(29,[23]).
+tamperProtections(29,[]).
+/** END resourceContainerProtection, ID: '29', NAME: 'UserControlledProtection' */
+
+
+/** BEGIN linkingResourceProtection, ID: '30', NAME: 'OpenWifiProtection' */
+description(30,'OpenWifiProtection','linkingResourceProtection').
+locationsAndTamperProtectionsPair(30).
+locations(30,[25]).
+tamperProtections(30,[]).
+/** END linkingResourceProtection, ID: '30', NAME: 'OpenWifiProtection' */
+
+
+/** BEGIN linkingResourceProtection, ID: '31', NAME: 'MobileStreetProtection' */
+description(31,'MobileStreetProtection','linkingResourceProtection').
+locationsAndTamperProtectionsPair(31).
+locations(31,[26]).
+tamperProtections(31,[]).
+/** END linkingResourceProtection, ID: '31', NAME: 'MobileStreetProtection' */
+
+
+/** BEGIN linkingResourceProtection, ID: '32', NAME: 'InternetProtection' */
+description(32,'InternetProtection','linkingResourceProtection').
+locationsAndTamperProtectionsPair(32).
+locations(32,[24]).
+tamperProtections(32,[]).
+/** END linkingResourceProtection, ID: '32', NAME: 'InternetProtection' */
+
+
+/** BEGIN resourceContainerConfidentiality, ID: '49', NAME: 'PossibleAndShared' */
+description(50,'AgencyServer','sharing').
+sharing(50,[shared]).
+description(50,'AgencyServer','connectionType').
+connectionType(50,[possible]).
+description(51,'AirlineServer','sharing').
+sharing(51,[shared]).
+description(51,'AirlineServer','connectionType').
+connectionType(51,[possible]).
+description(52,'MobilePhone','sharing').
+sharing(52,[shared]).
+description(52,'MobilePhone','connectionType').
+connectionType(52,[possible]).
+/** END resourceContainerConfidentiality, ID: '49', NAME: 'PossibleAndShared' */
+
+
+/** BEGIN encryption, ID: '53', NAME: 'UnencryptedLinkingResources' */
+description(53,'UnencryptedLinkingResources','encryption').
+unencryptedData(54,[]).
+description(53,'UnencryptedLinkingResources','encryption').
+unencryptedData(55,[]).
+/** END encryption, ID: '53', NAME: 'UnencryptedLinkingResources' */
+
+
+/** BEGIN encryption, ID: '56', NAME: 'CreditCardEncryption' */
+description(56,'CreditCardEncryption','encryption').
+unencryptedData(57,[]).
+/** END encryption, ID: '56', NAME: 'CreditCardEncryption' */
+
+/** END confidentialitySpecification, ID: '1', NAME: 'ConfidentialitySpecification' */
+
+
+/** BEGIN resourceContainer, ID: '51', NAME: 'AirlineServer' */
+description(51,'AirlineServer','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(51,[27]).
+/** END resourceContainer, ID: '51', NAME: 'AirlineServer' */
+
+/** BEGIN resourceContainer, ID: '52', NAME: 'MobilePhone' */
+description(52,'MobilePhone','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(52,[29]).
+/** END resourceContainer, ID: '52', NAME: 'MobilePhone' */
+
+/** BEGIN linkingResource, ID: '57', NAME: 'Internet' */
+description(57,'Internet','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(57,[32]).
+/** END linkingResource, ID: '57', NAME: 'Internet' */
+
+/** BEGIN linkingResource, ID: '54', NAME: 'OpenWifi + Internet' */
+description(54,'OpenWifi + Internet','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(54,[30]).
+/** END linkingResource, ID: '54', NAME: 'OpenWifi + Internet' */
+
+/** BEGIN linkingResource, ID: '55', NAME: '4G + Internet' */
+description(55,'4G + Internet','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(55,[31,32]).
+/** END linkingResource, ID: '55', NAME: '4G + Internet' */
+
+/** BEGIN resourceContainer, ID: '50', NAME: 'AgencyServer' */
+description(50,'AgencyServer','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(50,[28]).
+/** END resourceContainer, ID: '50', NAME: 'AgencyServer' */
+
+/** BEGIN operationSignature, ID: '58', NAME: 'releaseCCD' */
+description(58,'releaseCCD','informationFlow').
+parametersAndDataPairs(58,[16]).
+/** END operationSignature, ID: '58', NAME: 'releaseCCD' */
+
+/** BEGIN operationSignature, ID: '59', NAME: 'confirmRelease' */
+description(59,'confirmRelease','informationFlow').
+parametersAndDataPairs(59,[17,18]).
+/** END operationSignature, ID: '59', NAME: 'confirmRelease' */
+
+/** BEGIN operationSignature, ID: '60', NAME: 'bookSelected' */
+description(60,'bookSelected','informationFlow').
+parametersAndDataPairs(60,[8]).
+/** END operationSignature, ID: '60', NAME: 'bookSelected' */
+
+/** BEGIN operationSignature, ID: '61', NAME: 'setCreditCard' */
+description(61,'setCreditCard','informationFlow').
+parametersAndDataPairs(61,[15]).
+/** END operationSignature, ID: '61', NAME: 'setCreditCard' */
+
+/** BEGIN operationSignature, ID: '62', NAME: 'getSingleSelection' */
+description(62,'getSingleSelection','informationFlow').
+parametersAndDataPairs(62,[19]).
+/** END operationSignature, ID: '62', NAME: 'getSingleSelection' */
+
+/** BEGIN operationSignature, ID: '63', NAME: 'getFlightOffers' */
+description(63,'getFlightOffers','informationFlow').
+parametersAndDataPairs(63,[13,14]).
+/** END operationSignature, ID: '63', NAME: 'getFlightOffers' */
+
+/** BEGIN operationSignature, ID: '64', NAME: 'bookFlight' */
+description(64,'bookFlight','informationFlow').
+parametersAndDataPairs(64,[11,12,10]).
+/** END operationSignature, ID: '64', NAME: 'bookFlight' */
+
+/** BEGIN operationSignature, ID: '65', NAME: 'getFlightOffers' */
+description(65,'getFlightOffers','informationFlow').
+parametersAndDataPairs(65,[9]).
+/** END operationSignature, ID: '65', NAME: 'getFlightOffers' */
+
+/** BEGIN operationSignature, ID: '66', NAME: 'setAvailableFlights' */
+description(66,'setAvailableFlights','informationFlow').
+parametersAndDataPairs(66,[20]).
+/** END operationSignature, ID: '66', NAME: 'setAvailableFlights' */

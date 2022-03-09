@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.kit.kastel.scbs.confidentiality.adversary:Adversaries xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:edu.kit.kastel.scbs.confidentiality.adversary="http://edu.kit.kastel.scbs.confidentiality/adversary" xmlns:edu.kit.kastel.scbs.confidentiality.data="http://edu.kit.kastel.scbs.confidentiality/data" xmlns:edu.kit.kastel.scbs.confidentiality.resources="http://edu.kit.kastel.scbs.confidentiality/resources" id="_cKQYEBXyEeabKfvw_S-vrQ" entityName="cloud adversaries">
+  <adversaries id="_hJIs4BXyEeabKfvw_S-vrQ" entityName="cloud end user A">
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSetMapEntry" href="cloud.confidentiality#_nEocojSLEeaRTJfWzuCJjw"/>
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSetMapEntry" href="cloud.confidentiality#_liW6Um9fEeam26epJlCOmw"/>
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" href="cloud.confidentiality#_wcLpPJMXEeyOLrLhYWYnJA"/>
+  </adversaries>
+  <adversaries id="_6U1D0BXzEeabKfvw_S-vrQ" entityName="cloud service administrator">
+    <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSetMapEntry" href="cloud.confidentiality#_liW6Um9fEeam26epJlCOmw"/>
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" href="cloud.confidentiality#_A5UHXERqEeengr1ydYHSKA"/>
+  </adversaries>
+  <adversaries id="_SuRkUI7cEealUusoPax18A" entityName="ChuckNorris">
+    <mayTamperWith xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" href="cloud.confidentiality#_wcLpPJMXEeyOLrLhYWYnJA"/>
+  </adversaries>
+</edu.kit.kastel.scbs.confidentiality.adversary:Adversaries>

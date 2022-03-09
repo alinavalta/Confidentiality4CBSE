@@ -1,0 +1,144 @@
+
+/** BEGIN furtherPhysicalConnections, ID: '333', NAME: 'null' */
+description(333,'null','furtherPhysicalConnections').
+connectionType(333,[possible]).
+/** END furtherPhysicalConnections, ID: '333', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '333', NAME: 'null' */
+description(333,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(333,[40]).
+/** END locationAndTamperProtection, ID: '333', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '333', NAME: 'null' */
+description(333,'null','sharing').
+sharing(333,[exclusive]).
+/** END sharing, ID: '333', NAME: 'null' */
+
+
+/** BEGIN furtherPhysicalConnections, ID: '334', NAME: 'null' */
+description(334,'null','furtherPhysicalConnections').
+connectionType(334,[possible]).
+/** END furtherPhysicalConnections, ID: '334', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '334', NAME: 'null' */
+description(334,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(334,[40]).
+/** END locationAndTamperProtection, ID: '334', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '334', NAME: 'null' */
+description(334,'null','sharing').
+sharing(334,[exclusive]).
+/** END sharing, ID: '334', NAME: 'null' */
+
+
+/** BEGIN furtherPhysicalConnections, ID: '335', NAME: 'null' */
+description(335,'null','furtherPhysicalConnections').
+connectionType(335,[possible]).
+/** END furtherPhysicalConnections, ID: '335', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '335', NAME: 'null' */
+description(335,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(335,[41]).
+/** END locationAndTamperProtection, ID: '335', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '335', NAME: 'null' */
+description(335,'null','sharing').
+sharing(335,[exclusive]).
+/** END sharing, ID: '335', NAME: 'null' */
+
+
+/** BEGIN furtherPhysicalConnections, ID: '336', NAME: 'null' */
+description(336,'null','furtherPhysicalConnections').
+connectionType(336,[possible]).
+/** END furtherPhysicalConnections, ID: '336', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '336', NAME: 'null' */
+description(336,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(336,[41]).
+/** END locationAndTamperProtection, ID: '336', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '336', NAME: 'null' */
+description(336,'null','sharing').
+sharing(336,[exclusive]).
+/** END sharing, ID: '336', NAME: 'null' */
+
+
+/** BEGIN furtherPhysicalConnections, ID: '337', NAME: 'null' */
+description(337,'null','furtherPhysicalConnections').
+connectionType(337,[possible]).
+/** END furtherPhysicalConnections, ID: '337', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '337', NAME: 'null' */
+description(337,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(337,[41]).
+/** END locationAndTamperProtection, ID: '337', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '337', NAME: 'null' */
+description(337,'null','sharing').
+sharing(337,[exclusive]).
+/** END sharing, ID: '337', NAME: 'null' */
+
+
+/** BEGIN furtherPhysicalConnections, ID: '338', NAME: 'null' */
+description(338,'null','furtherPhysicalConnections').
+connectionType(338,[possible]).
+/** END furtherPhysicalConnections, ID: '338', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '338', NAME: 'null' */
+description(338,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(338,[42]).
+/** END locationAndTamperProtection, ID: '338', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '338', NAME: 'null' */
+description(338,'null','sharing').
+sharing(338,[shared]).
+/** END sharing, ID: '338', NAME: 'null' */
+
+
+/** BEGIN furtherPhysicalConnections, ID: '339', NAME: 'null' */
+description(339,'null','furtherPhysicalConnections').
+connectionType(339,[possible]).
+/** END furtherPhysicalConnections, ID: '339', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '339', NAME: 'null' */
+description(339,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(339,[43]).
+/** END locationAndTamperProtection, ID: '339', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '339', NAME: 'null' */
+description(339,'null','sharing').
+sharing(339,[shared]).
+/** END sharing, ID: '339', NAME: 'null' */
+
+
+/** BEGIN furtherPhysicalConnections, ID: '340', NAME: 'null' */
+description(340,'null','furtherPhysicalConnections').
+connectionType(340,[existing]).
+/** END furtherPhysicalConnections, ID: '340', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '340', NAME: 'null' */
+description(340,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(340,[44]).
+/** END locationAndTamperProtection, ID: '340', NAME: 'null' */
+
+
+/** BEGIN sharing, ID: '340', NAME: 'null' */
+description(340,'null','sharing').
+sharing(340,[shared]).
+/** END sharing, ID: '340', NAME: 'null' */
+

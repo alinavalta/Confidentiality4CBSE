@@ -1,0 +1,276 @@
+
+/** BEGIN confidentialitySpecification, ID: '1', NAME: 'cloud confidentiality specification' */
+description(1,'cloud confidentiality specification','confidentialitySpecification').
+confidentialitySpecification(1).
+dataIdentifier(1,[2,3,4,5,6,7,8,9,10]).
+dataSetMaps(1,[11]).
+addedServiceParameters(1,[12]).
+parametersAndDataPairs(1,[13,14,15]).
+specificationParameterAssignments(1,[16]).
+specificationParameterEquations(1,[17,18,19]).
+locations(1,[20,21]).
+tamperProtections(1,[22]).
+locationsAndTamperProtectionsPairs(1,[23,24,25,26]).
+
+/** BEGIN specificationParameter, ID: '2', NAME: 'Self' */
+description(2,'Self','specificationParameter').
+specificationParameter(2).
+/** END specificationParameter, ID: '2', NAME: 'Self' */
+
+
+/** BEGIN specificationParameter, ID: '3', NAME: 'Friends' */
+description(3,'Friends','specificationParameter').
+specificationParameter(3).
+/** END specificationParameter, ID: '3', NAME: 'Friends' */
+
+
+/** BEGIN specificationParameter, ID: '4', NAME: '*' */
+description(4,'*','specificationParameter').
+specificationParameter(4).
+/** END specificationParameter, ID: '4', NAME: '*' */
+
+
+/** BEGIN parameterizedDataSetMapEntry, ID: '5', NAME: 'UserData[self]' */
+description(5,'UserData[self]','parameterizedDataSetMapEntry').
+parameterizedDataSetMapEntry(5).
+map(5,[11]).
+parameter(5,[2]).
+/** END parameterizedDataSetMapEntry, ID: '5', NAME: 'UserData[self]' */
+
+
+/** BEGIN parameterizedDataSetMapEntry, ID: '6', NAME: 'UserData[friends]' */
+description(6,'UserData[friends]','parameterizedDataSetMapEntry').
+parameterizedDataSetMapEntry(6).
+map(6,[11]).
+parameter(6,[3]).
+/** END parameterizedDataSetMapEntry, ID: '6', NAME: 'UserData[friends]' */
+
+
+/** BEGIN parameterizedDataSetMapEntry, ID: '7', NAME: 'UserData[*]' */
+description(7,'UserData[*]','parameterizedDataSetMapEntry').
+parameterizedDataSetMapEntry(7).
+map(7,[11]).
+parameter(7,[4]).
+/** END parameterizedDataSetMapEntry, ID: '7', NAME: 'UserData[*]' */
+
+
+/** BEGIN dataSetMapEntry, ID: '8', NAME: 'A' */
+description(8,'A','dataSetMapEntry').
+dataSetMapEntry(8).
+nameFor(8,["A"]).
+map(8,[11]).
+/** END dataSetMapEntry, ID: '8', NAME: 'A' */
+
+
+/** BEGIN dataSetMapEntry, ID: '9', NAME: 'B' */
+description(9,'B','dataSetMapEntry').
+dataSetMapEntry(9).
+nameFor(9,["B"]).
+map(9,[11]).
+/** END dataSetMapEntry, ID: '9', NAME: 'B' */
+
+
+/** BEGIN dataSetMapEntry, ID: '10', NAME: 'Public' */
+description(10,'Public','dataSetMapEntry').
+dataSetMapEntry(10).
+nameFor(10,["Public"]).
+map(10,[11]).
+/** END dataSetMapEntry, ID: '10', NAME: 'Public' */
+
+
+/** BEGIN dataSetMap, ID: '11', NAME: 'UserData' */
+description(11,'UserData','dataSetMap').
+dataSetMap(11).
+/** END dataSetMap, ID: '11', NAME: 'UserData' */
+
+
+/** BEGIN addedServiceParameter, ID: '12', NAME: 's' */
+description(12,'s','addedServiceParameter').
+addedServiceParameter(12).
+/** END addedServiceParameter, ID: '12', NAME: 's' */
+
+/** BEGIN signatureInformationFlow, ID: '27', NAME: 'shareFriendsFlow' */
+description(13,'shareFriends','parametersAndDataPair').
+parametersAndDataPair(13).
+parameterSources(13,[*]).
+dataTargets(13,[6]).
+/** END signatureInformationFlow, ID: '27', NAME: 'shareFriendsFlow' */
+
+/** BEGIN interfaceInformationFlow, ID: '28', NAME: 'FileManGUI' */
+description(14,'fileManGui','parametersAndDataPair').
+parametersAndDataPair(14).
+parameterSources(14,[*]).
+dataTargets(14,[5]).
+description(15,'sizeOf','parametersAndDataPair').
+parametersAndDataPair(15).
+parameterSources(15,[sizeOf(*)]).
+dataTargets(15,[10]).
+/** END interfaceInformationFlow, ID: '28', NAME: 'FileManGUI' */
+
+/** BEGIN signatureInformationFlow, ID: '29', NAME: 'putFriendsFlow' */
+/** END signatureInformationFlow, ID: '29', NAME: 'putFriendsFlow' */
+
+/** BEGIN interfaceInformationFlow, ID: '30', NAME: 'IObjStoreFlow' */
+/** END interfaceInformationFlow, ID: '30', NAME: 'IObjStoreFlow' */
+
+
+/** BEGIN informationFlowParameter, ID: '31', NAME: 'FileManGUIFlowParameter' */
+specificationParameters(32,[3,2]).
+serviceParameters(32,[12]).
+/** END informationFlowParameter, ID: '31', NAME: 'FileManGUIFlowParameter' */
+
+/** BEGIN informationFlowParameter, ID: '33', NAME: 'ObjStore FlowParameter' */
+specificationParameters(34,[2,3]).
+serviceParameters(34,[12]).
+/** END informationFlowParameter, ID: '33', NAME: 'ObjStore FlowParameter' */
+
+/** BEGIN dataSetMapParameter2KeyAssignment, ID: '16', NAME: 'SysProvAuth' */
+description(16,'SysProvAuth','dataSetMapParameter2KeyAssignment').
+dataSetMapParameter2KeyAssignment(16).
+specificationParametersToReplace(16,[2]).
+assignedKey(16,["A"]).
+/** END dataSetMapParameter2KeyAssignment, ID: '16', NAME: 'SysProvAuth' */
+
+
+/** BEGIN specificationParameterEquation, ID: '17', NAME: 'FlieManGui[self] = IObjStore[self]' */
+description(17,'FlieManGui[self] = IObjStore[self]','specificationParameterEquation').
+specificationParameterEquation(17).
+leftSpecificationParameter(17,[2]).
+rightSpecificationParameter(17,[2]).
+leftInterfaces(17,[32]).
+rightInterfaces(17,[34]).
+/** END specificationParameterEquation, ID: '17', NAME: 'FlieManGui[self] = IObjStore[self]' */
+
+
+/** BEGIN specificationParameterEquation, ID: '18', NAME: 'FileManGUI[friends] = IObjStore[friends]' */
+description(18,'FileManGUI[friends] = IObjStore[friends]','specificationParameterEquation').
+specificationParameterEquation(18).
+leftSpecificationParameter(18,[3]).
+rightSpecificationParameter(18,[3]).
+leftInterfaces(18,[32]).
+rightInterfaces(18,[34]).
+/** END specificationParameterEquation, ID: '18', NAME: 'FileManGUI[friends] = IObjStore[friends]' */
+
+
+/** BEGIN specificationParameterEquation, ID: '19', NAME: 'IObjStore[self] = IObjStore[self]' */
+description(19,'IObjStore[self] = IObjStore[self]','specificationParameterEquation').
+specificationParameterEquation(19).
+leftSpecificationParameter(19,[2]).
+rightSpecificationParameter(19,[2]).
+leftInterfaces(19,[34]).
+rightInterfaces(19,[34]).
+/** END specificationParameterEquation, ID: '19', NAME: 'IObjStore[self] = IObjStore[self]' */
+
+
+/** BEGIN location, ID: '20', NAME: 'userAHome' */
+description(20,'userAHome','location').
+location(20).
+/** END location, ID: '20', NAME: 'userAHome' */
+
+
+/** BEGIN location, ID: '21', NAME: 'outerZone' */
+description(21,'outerZone','location').
+location(21).
+/** END location, ID: '21', NAME: 'outerZone' */
+
+
+/** BEGIN tamperProtection, ID: '22', NAME: 'perimeterProtection' */
+description(22,'perimeterProtection','tamperProtection').
+tamperProtection(22).
+/** END tamperProtection, ID: '22', NAME: 'perimeterProtection' */
+
+
+/** BEGIN resourceContainerProtection, ID: '23', NAME: 'VM Protection No Tamperprotection' */
+description(23,'VM Protection No Tamperprotection','resourceContainerProtection').
+locationsAndTamperProtectionsPair(23).
+locations(23,[21]).
+tamperProtections(23,[]).
+/** END resourceContainerProtection, ID: '23', NAME: 'VM Protection No Tamperprotection' */
+
+
+/** BEGIN resourceContainerProtection, ID: '24', NAME: 'VM Protection' */
+description(24,'VM Protection','resourceContainerProtection').
+locationsAndTamperProtectionsPair(24).
+locations(24,[21]).
+tamperProtections(24,[22]).
+/** END resourceContainerProtection, ID: '24', NAME: 'VM Protection' */
+
+
+/** BEGIN resourceContainerProtection, ID: '25', NAME: 'UserMaschineProtection' */
+description(25,'UserMaschineProtection','resourceContainerProtection').
+locationsAndTamperProtectionsPair(25).
+locations(25,[20]).
+tamperProtections(25,[]).
+/** END resourceContainerProtection, ID: '25', NAME: 'UserMaschineProtection' */
+
+
+/** BEGIN resourceContainerProtection, ID: '26', NAME: 'NoProtection' */
+description(26,'NoProtection','resourceContainerProtection').
+locationsAndTamperProtectionsPair(26).
+locations(26,[]).
+tamperProtections(26,[]).
+/** END resourceContainerProtection, ID: '26', NAME: 'NoProtection' */
+
+
+/** BEGIN resourceContainerConfidentiality, ID: '35', NAME: 'UserMaschineConfidentiality' */
+description(36,'End User Machine A','sharing').
+sharing(36,[shared]).
+description(36,'End User Machine A','connectionType').
+connectionType(36,[existing]).
+/** END resourceContainerConfidentiality, ID: '35', NAME: 'UserMaschineConfidentiality' */
+
+
+/** BEGIN resourceContainerConfidentiality, ID: '37', NAME: 'VM Confidentiality' */
+description(38,'VM E','sharing').
+sharing(38,[exclusive]).
+description(38,'VM E','connectionType').
+connectionType(38,[possible]).
+/** END resourceContainerConfidentiality, ID: '37', NAME: 'VM Confidentiality' */
+
+/** END confidentialitySpecification, ID: '1', NAME: 'cloud confidentiality specification' */
+
+
+/** BEGIN resourceContainer, ID: '36', NAME: 'End User Machine A' */
+description(36,'End User Machine A','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(36,[25]).
+/** END resourceContainer, ID: '36', NAME: 'End User Machine A' */
+
+/** BEGIN resourceContainer, ID: '38', NAME: 'VM E' */
+description(38,'VM E','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPairs(38,[24]).
+/** END resourceContainer, ID: '38', NAME: 'VM E' */
+
+/** BEGIN operationSignature, ID: '39', NAME: 'putFriends' */
+description(39,'putFriends','informationFlow').
+parametersAndDataPairs(39,[13]).
+/** END operationSignature, ID: '39', NAME: 'putFriends' */
+
+/** BEGIN operationSignature, ID: '40', NAME: 'shareFriends' */
+description(40,'shareFriends','informationFlow').
+parametersAndDataPairs(40,[13]).
+/** END operationSignature, ID: '40', NAME: 'shareFriends' */
+
+/** BEGIN operationSignature, ID: '39', NAME: 'putFriends' */
+description(39,'putFriends','informationFlow').
+parametersAndDataPairs(39,[14,15]).
+/** END operationSignature, ID: '39', NAME: 'putFriends' */
+
+/** BEGIN operationSignature, ID: '40', NAME: 'shareFriends' */
+description(40,'shareFriends','informationFlow').
+parametersAndDataPairs(40,[14,15]).
+/** END operationSignature, ID: '40', NAME: 'shareFriends' */
+
+/** BEGIN providedDelegationConnector, ID: '41', NAME: 'sysProvFMG2FMA' */
+description(41,'sysProvFMG2FMA','assignment').
+assignments(41,[16]).
+/** END providedDelegationConnector, ID: '41', NAME: 'sysProvFMG2FMA' */
+
+/** BEGIN assemblyContext, ID: '42', NAME: 'LoadBalancer' */
+description(42,'LoadBalancer','equation').
+equations(42,[19]).
+/** END assemblyContext, ID: '42', NAME: 'LoadBalancer' */
+
+/** BEGIN assemblyContext, ID: '43', NAME: 'FileManagerA' */
+description(43,'FileManagerA','equation').
+equations(43,[17,18]).
+/** END assemblyContext, ID: '43', NAME: 'FileManagerA' */

@@ -1,0 +1,31 @@
+
+/** BEGIN adversaries, ID: '44', NAME: 'cloud adversaries' */
+description(44,'cloud adversaries','adversaries').
+adversaries(44).
+adversaries(44,[45,46,47]).
+
+/** BEGIN adversary, ID: '45', NAME: 'cloud end user A' */
+description(45,'cloud end user A','adversary').
+adversary(45).
+mayKnowData(45,[8,10]).
+locationsAndTamperProtectionsPairs(45,[26]).
+/** END adversary, ID: '45', NAME: 'cloud end user A' */
+
+
+/** BEGIN adversary, ID: '46', NAME: 'cloud service administrator' */
+description(46,'cloud service administrator','adversary').
+adversary(46).
+mayKnowData(46,[10]).
+locationsAndTamperProtectionsPairs(46,[23]).
+/** END adversary, ID: '46', NAME: 'cloud service administrator' */
+
+
+/** BEGIN adversary, ID: '47', NAME: 'ChuckNorris' */
+description(47,'ChuckNorris','adversary').
+adversary(47).
+mayKnowData(47,[]).
+locationsAndTamperProtectionsPairs(47,[26]).
+/** END adversary, ID: '47', NAME: 'ChuckNorris' */
+
+/** END adversaries, ID: '44', NAME: 'cloud adversaries' */
+

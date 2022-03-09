@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:edu.kit.kastel.scbs.confidentiality="http://edu.kit.kastel.scbs.confidentiality" xmlns:edu.kit.kastel.scbs.confidentiality.data="http://edu.kit.kastel.scbs.confidentiality/data" xmlns:edu.kit.kastel.scbs.confidentiality.information="http://edu.kit.kastel.scbs.confidentiality/information" xmlns:edu.kit.kastel.scbs.confidentiality.repository="http://edu.kit.kastel.scbs.confidentiality.repository" xmlns:edu.kit.kastel.scbs.confidentiality.resources="http://edu.kit.kastel.scbs.confidentiality/resources" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1">
+  <edu.kit.kastel.scbs.confidentiality:ConfidentialitySpecification id="_4fg0MJziEeWvbrCzHVJijg" entityName="ConfidentialitySpecification">
+    <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="__WYS5MOFEeWst9mTsticNA" entityName="CreditCardInformation"/>
+    <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_TmShxMOGEeWst9mTsticNA" entityName="ComissionData"/>
+    <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_FoQgpMOGEeWst9mTsticNA" entityName="TravelData"/>
+    <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_9N5G9MOGEeWst9mTsticNA" entityName="CreditCardInformationDeclassified"/>
+    <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_W7aTtM5sEeWFJak7Wqvc0g" entityName="FlightOffer"/>
+    <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_EZMjdM5xEeWFJak7Wqvc0g" entityName="Selection"/>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_SKPxI850EeW6RpZqSiINDQ" entityName="bookSelectedFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_SKPxI850EeW6RpZqSiINDQ" entityName="flightOfferParameter" dataTargets="_EZMjdM5xEeWFJak7Wqvc0g _W7aTtM5sEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.1/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_GmUUEMN1EeWPE-QAhbUzuQ"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_DHYO4850EeW6RpZqSiINDQ" entityName="BookingSelectionGetOffersFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_Y7ea4-RNEeWuZOK2YocvJA" entityName="requestDataParameter" dataTargets="_FoQgpMOGEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.1/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_602gYM5lEeWFJak7Wqvc0g"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_qIJum5HTEey3YvwGeqKY4w" entityName="bookFlightFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_oO43k851EeW6RpZqSiINDQ" entityName="ccd_declassifiedParameter" dataTargets="_9N5G9MOGEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+      </information>
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ReturnValueInformation" id="_UuIJU-RQEeWuZOK2YocvJA" entityName="returnValue" dataTargets="_9N5G9MOGEeWst9mTsticNA _W7aTtM5sEeWFJak7Wqvc0g _EZMjdM5xEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA"/>
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_fegnE851EeW6RpZqSiINDQ" entityName="offerIdParameter" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g _EZMjdM5xEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_00dt8MNyEeWPE-QAhbUzuQ"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_yxuFG5HWEeyGIIAZ1Mtucg" entityName="getFlightOffersFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_2eLAw851EeW6RpZqSiINDQ" entityName="requestDataParameter" dataTargets="_FoQgpMOGEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.1/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+      </information>
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ReturnValueInformation" id="_Dh6HY853EeW6RpZqSiINDQ" entityName="returnValue" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA"/>
+      <appliedTo href="default.repository#_R6uH4MNyEeWPE-QAhbUzuQ"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_b7_1G5HXEeyGIIAZ1Mtucg" entityName="setCreditCardFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_otcRQ850EeW6RpZqSiINDQ" entityName="creditCardParameter" dataTargets="__WYS5MOFEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.4/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_N6idsMN3EeWPE-QAhbUzuQ"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_J1V8S5HYEeyGIIAZ1Mtucg" entityName="releaseCCDFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_bZZg8853EeW6RpZqSiINDQ" entityName="airlineParameter" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g _EZMjdM5xEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.5/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_JXJqsMN6EeWPE-QAhbUzuQ"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_jTfKm5HYEeyGIIAZ1Mtucg" entityName="confirmReleaseFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_Kk7JE851EeW6RpZqSiINDQ" entityName="airlineParameter" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g _EZMjdM5xEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+      </information>
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_3XZkQM50EeW6RpZqSiINDQ" entityName="creditCardParameter" dataTargets="__WYS5MOFEeWst9mTsticNA">
+        <appliedTo href="default.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_hAD1sMN6EeWPE-QAhbUzuQ"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_DTMBa5HZEeyGIIAZ1Mtucg" entityName="getSingleSelectionFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_XhR8s85zEeW6RpZqSiINDQ" entityName="flightOffers" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g">
+        <appliedTo href="default.repository#//@interfaces__Repository.7/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_Ub62oM5lEeWFJak7Wqvc0g"/>
+    </informationFlows>
+    <informationFlows xsi:type="edu.kit.kastel.scbs.confidentiality.repository:SignatureInformationFlow" id="_a1EXW5HZEeyGIIAZ1Mtucg" entityName="setAvailableFlightsFlow">
+      <information xsi:type="edu.kit.kastel.scbs.confidentiality.information:ParameterInformation" id="_Cu2sE85yEeWFJak7Wqvc0g" entityName="flightsParameter" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g">
+        <appliedTo href="default.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+      </information>
+      <appliedTo href="default.repository#_ok8ZYM5wEeWFJak7Wqvc0g"/>
+    </informationFlows>
+    <locations id="__RugEc6AEeWqSdNpnh9tmQ" entityName="TravelAgency"/>
+    <locations id="_CB0pIc6BEeWqSdNpnh9tmQ" entityName="Airline"/>
+    <locations id="_DCp0Ac6BEeWqSdNpnh9tmQ" entityName="UserControlled"/>
+    <locations id="_IYDLYc6BEeWqSdNpnh9tmQ" entityName="Internet"/>
+    <locations id="_SpLngc6CEeWqSdNpnh9tmQ" entityName="CoffeShop"/>
+    <locations id="_nv3tYc6CEeWqSdNpnh9tmQ" entityName="Street"/>
+    <resourceProtections xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" id="_-YubgM6AEeWqSdNpnh9tmQ" entityName="AirlineProtection" locations="_CB0pIc6BEeWqSdNpnh9tmQ">
+      <resourceContainer href="default.resourceenvironment#_fuWBEMN4EeWPE-QAhbUzuQ"/>
+    </resourceProtections>
+    <resourceProtections xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" id="_QBclsM6BEeWqSdNpnh9tmQ" entityName="TravelAgencyProtection" locations="__RugEc6AEeWqSdNpnh9tmQ">
+      <resourceContainer href="default.resourceenvironment#_HM_VsMN5EeWPE-QAhbUzuQ"/>
+    </resourceProtections>
+    <resourceProtections xsi:type="edu.kit.kastel.scbs.confidentiality.resources:ResourceContainerProtection" id="_RmAIsM6BEeWqSdNpnh9tmQ" entityName="UserControlledProtection" locations="_DCp0Ac6BEeWqSdNpnh9tmQ">
+      <resourceContainer href="default.resourceenvironment#_Lq-ZYMN4EeWPE-QAhbUzuQ"/>
+    </resourceProtections>
+    <resourceProtections xsi:type="edu.kit.kastel.scbs.confidentiality.resources:LinkingResourceProtection" id="_XwoCcM6CEeWqSdNpnh9tmQ" entityName="OpenWifiProtection" locations="_SpLngc6CEeWqSdNpnh9tmQ">
+      <linkingResource href="default.resourceenvironment#_1XdFQMN9EeWPE-QAhbUzuQ"/>
+    </resourceProtections>
+    <resourceProtections xsi:type="edu.kit.kastel.scbs.confidentiality.resources:LinkingResourceProtection" id="_txU5gM6CEeWqSdNpnh9tmQ" entityName="MobileStreetProtection" locations="_nv3tYc6CEeWqSdNpnh9tmQ">
+      <linkingResource href="default.resourceenvironment#_niT6YMN9EeWPE-QAhbUzuQ"/>
+    </resourceProtections>
+    <resourceProtections xsi:type="edu.kit.kastel.scbs.confidentiality.resources:LinkingResourceProtection" id="_8bxUsM6CEeWqSdNpnh9tmQ" entityName="InternetProtection" locations="_IYDLYc6BEeWqSdNpnh9tmQ">
+      <linkingResource href="default.resourceenvironment#_niT6YMN9EeWPE-QAhbUzuQ"/>
+      <linkingResource href="default.resourceenvironment#_67lcMMN9EeWPE-QAhbUzuQ"/>
+    </resourceProtections>
+    <resourceConfidentialities id="_asISuXqsEeyC89e_jaSZfQ" entityName="PossibleAndShared" connectionType="possible">
+      <appliedTo href="default.resourceenvironment#_HM_VsMN5EeWPE-QAhbUzuQ"/>
+      <appliedTo href="default.resourceenvironment#_fuWBEMN4EeWPE-QAhbUzuQ"/>
+      <appliedTo href="default.resourceenvironment#_Lq-ZYMN4EeWPE-QAhbUzuQ"/>
+    </resourceConfidentialities>
+    <encryptions id="_asISvXqsEeyC89e_jaSZfQ" entityName="UnencryptedLinkingResources">
+      <appliedTo href="default.resourceenvironment#_1XdFQMN9EeWPE-QAhbUzuQ"/>
+      <appliedTo href="default.resourceenvironment#_niT6YMN9EeWPE-QAhbUzuQ"/>
+    </encryptions>
+    <encryptions id="_6rqroZHQEey3YvwGeqKY4w" entityName="CreditCardEncryption">
+      <appliedTo href="default.resourceenvironment#_67lcMMN9EeWPE-QAhbUzuQ"/>
+    </encryptions>
+  </edu.kit.kastel.scbs.confidentiality:ConfidentialitySpecification>
+  <emfprofileapplication:ProfileApplication/>
+</xmi:XMI>
