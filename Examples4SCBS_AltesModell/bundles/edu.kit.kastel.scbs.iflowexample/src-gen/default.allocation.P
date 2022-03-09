@@ -1,0 +1,63 @@
+
+/** BEGIN allocation, ID: '140', NAME: 'defaultAllocation' */
+description(140,'defaultAllocation','allocation').
+allocation(140).
+allocationContexts(140,[141,142,143,144,145,146,147]).
+
+/** BEGIN allocationContext, ID: '141', NAME: 'Allocation_Energy Visualization' */
+description(141,'Allocation_Energy Visualization','allocationContext').
+allocationContext(141).
+resourceContainer(141,[148]).
+assemblyContext_AllocationContext(141,[149]).
+/** END allocationContext, ID: '141', NAME: 'Allocation_Energy Visualization' */
+
+
+/** BEGIN allocationContext, ID: '142', NAME: 'Allocation_Database <DBMS>' */
+description(142,'Allocation_Database <DBMS>','allocationContext').
+allocationContext(142).
+resourceContainer(142,[150]).
+assemblyContext_AllocationContext(142,[151]).
+/** END allocationContext, ID: '142', NAME: 'Allocation_Database <DBMS>' */
+
+
+/** BEGIN allocationContext, ID: '143', NAME: 'Allocation_Energy Meter' */
+description(143,'Allocation_Energy Meter','allocationContext').
+allocationContext(143).
+resourceContainer(143,[152]).
+assemblyContext_AllocationContext(143,[153]).
+/** END allocationContext, ID: '143', NAME: 'Allocation_Energy Meter' */
+
+
+/** BEGIN allocationContext, ID: '144', NAME: 'Allocation_TravelAgency <TravelAgency> <TravelAgency>' */
+description(144,'Allocation_TravelAgency <TravelAgency> <TravelAgency>','allocationContext').
+allocationContext(144).
+resourceContainer(144,[137]).
+assemblyContext_AllocationContext(144,[104]).
+/** END allocationContext, ID: '144', NAME: 'Allocation_TravelAgency <TravelAgency> <TravelAgency>' */
+
+
+/** BEGIN allocationContext, ID: '145', NAME: 'Allocation_Airline <Airline> <Airline>' */
+description(145,'Allocation_Airline <Airline> <Airline>','allocationContext').
+allocationContext(145).
+resourceContainer(145,[138]).
+assemblyContext_AllocationContext(145,[106]).
+/** END allocationContext, ID: '145', NAME: 'Allocation_Airline <Airline> <Airline>' */
+
+
+/** BEGIN allocationContext, ID: '146', NAME: 'Allocation_CreditCardCenter <CreditCardCenter> <CreditCardCenter>' */
+description(146,'Allocation_CreditCardCenter <CreditCardCenter> <CreditCardCenter>','allocationContext').
+allocationContext(146).
+resourceContainer(146,[139]).
+assemblyContext_AllocationContext(146,[107]).
+/** END allocationContext, ID: '146', NAME: 'Allocation_CreditCardCenter <CreditCardCenter> <CreditCardCenter>' */
+
+
+/** BEGIN allocationContext, ID: '147', NAME: 'Allocation_TravelPlanner <TravelPlanner> <TravelPlanner>' */
+description(147,'Allocation_TravelPlanner <TravelPlanner> <TravelPlanner>','allocationContext').
+allocationContext(147).
+resourceContainer(147,[139]).
+assemblyContext_AllocationContext(147,[105]).
+/** END allocationContext, ID: '147', NAME: 'Allocation_TravelPlanner <TravelPlanner> <TravelPlanner>' */
+
+/** END allocation, ID: '140', NAME: 'defaultAllocation' */
+

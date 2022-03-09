@@ -1,0 +1,36 @@
+
+/** BEGIN locationAndTamperProtection, ID: '130', NAME: 'null' */
+description(130,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(130,[28]).
+/** END locationAndTamperProtection, ID: '130', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '129', NAME: 'null' */
+description(129,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(129,[29]).
+/** END locationAndTamperProtection, ID: '129', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '128', NAME: 'null' */
+description(128,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(128,[30]).
+/** END locationAndTamperProtection, ID: '128', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '126', NAME: 'null' */
+description(126,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(126,[31,33]).
+/** END locationAndTamperProtection, ID: '126', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '127', NAME: 'null' */
+description(127,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(127,[32]).
+/** END locationAndTamperProtection, ID: '127', NAME: 'null' */
+
+
+/** BEGIN locationAndTamperProtection, ID: '125', NAME: 'null' */
+description(125,'null','locationAndTamperProtection').
+locationsAndTamperProtectionsPairs(125,[33]).
+/** END locationAndTamperProtection, ID: '125', NAME: 'null' */
+

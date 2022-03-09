@@ -1,0 +1,48 @@
+
+/** BEGIN informationFlow, ID: '84', NAME: 'null' */
+description(84,'null','informationFlow').
+parametersAndDataPairs(84,[5,8]).
+/** END informationFlow, ID: '84', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '75', NAME: 'null' */
+description(75,'null','informationFlow').
+parametersAndDataPairs(75,[6,7]).
+/** END informationFlow, ID: '75', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '76', NAME: 'null' */
+description(76,'null','informationFlow').
+parametersAndDataPairs(76,[12,11]).
+/** END informationFlow, ID: '76', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '87', NAME: 'null' */
+description(87,'null','informationFlow').
+parametersAndDataPairs(87,[11,13]).
+/** END informationFlow, ID: '87', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '88', NAME: 'null' */
+description(88,'null','informationFlow').
+parametersAndDataPairs(88,[14,10]).
+/** END informationFlow, ID: '88', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '74', NAME: 'null' */
+description(74,'null','informationFlow').
+parametersAndDataPairs(74,[17,18,16]).
+/** END informationFlow, ID: '74', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '83', NAME: 'null' */
+description(83,'null','informationFlow').
+parametersAndDataPairs(83,[19,20,15]).
+/** END informationFlow, ID: '83', NAME: 'null' */
+
+
+/** BEGIN informationFlow, ID: '70', NAME: 'null' */
+description(70,'null','informationFlow').
+parametersAndDataPairs(70,[21]).
+/** END informationFlow, ID: '70', NAME: 'null' */
+

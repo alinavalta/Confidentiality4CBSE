@@ -1,0 +1,18 @@
+
+/** BEGIN informationFlowParameterAssignment, ID: '56', NAME: 'null' */
+description(56,'null','informationFlowParameterAssignment').
+assignments(56,[16]).
+/** END informationFlowParameterAssignment, ID: '56', NAME: 'null' */
+
+
+/** BEGIN informationFlowParameterEquation, ID: '53', NAME: 'null' */
+description(53,'null','informationFlowParameterEquation').
+equations(53,[19]).
+/** END informationFlowParameterEquation, ID: '53', NAME: 'null' */
+
+
+/** BEGIN informationFlowParameterEquation, ID: '54', NAME: 'null' */
+description(54,'null','informationFlowParameterEquation').
+equations(54,[17,18]).
+/** END informationFlowParameterEquation, ID: '54', NAME: 'null' */
+
