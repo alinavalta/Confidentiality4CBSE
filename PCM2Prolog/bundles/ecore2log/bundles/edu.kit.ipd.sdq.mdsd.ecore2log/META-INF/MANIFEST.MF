@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Emf2log
+Bundle-SymbolicName: edu.kit.ipd.sdq.mdsd.ecore2log
+Bundle-Version: 0.1
+Bundle-Vendor: SDQ
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.xtext.generator,
+ org.eclipse.core.resources,
+ edu.kit.ipd.sdq.commons.util.java,
+ org.eclipse.equinox.registry,
+ org.eclipse.core.commands,
+ org.eclipse.jface,
+ org.eclipse.ui.workbench,
+ edu.kit.ipd.sdq.mdsd.ecore2txt,
+ org.palladiosimulator.mdsdprofiles.api,
+ org.modelversioning.emfprofile
+Export-Package: edu.kit.ipd.sdq.mdsd.ecore2log.config,
+ edu.kit.ipd.sdq.mdsd.ecore2log.generator,
+ edu.kit.ipd.sdq.mdsd.ecore2log.handler
+Import-Package: com.google.inject
+
