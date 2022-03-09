@@ -10,7 +10,7 @@ specificationParameterAssignments(1,[16]).
 specificationParameterEquations(1,[17,18,19]).
 locations(1,[20,21]).
 tamperProtections(1,[22]).
-locationsAndTamperProtectionsPairs(1,[23,24,25]).
+locationsAndTamperProtectionsPairs(1,[23,24,25,26]).
 
 /** BEGIN specificationParameter, ID: '2', NAME: 'Self' */
 description(2,'Self','specificationParameter').
@@ -84,12 +84,12 @@ dataSetMap(11).
 /** END dataSetMap, ID: '11', NAME: 'UserData' */
 
 
-/** BEGIN parametersAndDataPair, ID: '12', NAME: 'p=[*] - d=[UserData[Self]]' */
-description(12,'p=[*] - d=[UserData[Self]]','parametersAndDataPair').
+/** BEGIN parametersAndDataPair, ID: '12', NAME: 'STAR2Userdataself' */
+description(12,'STAR2Userdataself','parametersAndDataPair').
 parametersAndDataPair(12).
 parameterSources(12,[*]).
 dataTargets(12,[5]).
-/** END parametersAndDataPair, ID: '12', NAME: 'p=[*] - d=[UserData[Self]]' */
+/** END parametersAndDataPair, ID: '12', NAME: 'STAR2Userdataself' */
 
 
 /** BEGIN parametersAndDataPair, ID: '13', NAME: 'p=[sizeOf(*)] - d=[UserData[Public]]' */
@@ -100,12 +100,12 @@ dataTargets(13,[10]).
 /** END parametersAndDataPair, ID: '13', NAME: 'p=[sizeOf(*)] - d=[UserData[Public]]' */
 
 
-/** BEGIN parametersAndDataPair, ID: '14', NAME: 'p=[*] - d=[UserData[Friends]]' */
-description(14,'p=[*] - d=[UserData[Friends]]','parametersAndDataPair').
+/** BEGIN parametersAndDataPair, ID: '14', NAME: 'STAR2Userdatafriends' */
+description(14,'STAR2Userdatafriends','parametersAndDataPair').
 parametersAndDataPair(14).
 parameterSources(14,[*]).
 dataTargets(14,[6]).
-/** END parametersAndDataPair, ID: '14', NAME: 'p=[*] - d=[UserData[Friends]]' */
+/** END parametersAndDataPair, ID: '14', NAME: 'STAR2Userdatafriends' */
 
 
 /** BEGIN addedServiceParameter, ID: '15', NAME: 's' */
@@ -127,8 +127,8 @@ description(17,'null','specificationParameterEquation').
 specificationParameterEquation(17).
 leftSpecificationParameter(17,[2]).
 rightSpecificationParameter(17,[2]).
-leftInterfaces(17,[26]).
-rightInterfaces(17,[27]).
+leftInterfaces(17,[27]).
+rightInterfaces(17,[28]).
 /** END specificationParameterEquation, ID: '17', NAME: 'null' */
 
 
@@ -137,8 +137,8 @@ description(18,'null','specificationParameterEquation').
 specificationParameterEquation(18).
 leftSpecificationParameter(18,[3]).
 rightSpecificationParameter(18,[3]).
-leftInterfaces(18,[26]).
-rightInterfaces(18,[27]).
+leftInterfaces(18,[27]).
+rightInterfaces(18,[28]).
 /** END specificationParameterEquation, ID: '18', NAME: 'null' */
 
 
@@ -147,8 +147,8 @@ description(19,'null','specificationParameterEquation').
 specificationParameterEquation(19).
 leftSpecificationParameter(19,[2]).
 rightSpecificationParameter(19,[2]).
-leftInterfaces(19,[27]).
-rightInterfaces(19,[27]).
+leftInterfaces(19,[28]).
+rightInterfaces(19,[28]).
 /** END specificationParameterEquation, ID: '19', NAME: 'null' */
 
 
@@ -178,20 +178,28 @@ tamperProtections(23,[]).
 /** END locationsAndTamperProtectionsPair, ID: '23', NAME: 'l=[outerZone] - t=[]' */
 
 
-/** BEGIN locationsAndTamperProtectionsPair, ID: '24', NAME: 'l=[outerZone] - t=[perimeterProtection]' */
-description(24,'l=[outerZone] - t=[perimeterProtection]','locationsAndTamperProtectionsPair').
+/** BEGIN locationsAndTamperProtectionsPair, ID: '24', NAME: 'l=[] - t=[]' */
+description(24,'l=[] - t=[]','locationsAndTamperProtectionsPair').
 locationsAndTamperProtectionsPair(24).
-locations(24,[21]).
-tamperProtections(24,[22]).
-/** END locationsAndTamperProtectionsPair, ID: '24', NAME: 'l=[outerZone] - t=[perimeterProtection]' */
+locations(24,[]).
+tamperProtections(24,[]).
+/** END locationsAndTamperProtectionsPair, ID: '24', NAME: 'l=[] - t=[]' */
 
 
-/** BEGIN locationsAndTamperProtectionsPair, ID: '25', NAME: 'l=[userAHome] - t=[]' */
-description(25,'l=[userAHome] - t=[]','locationsAndTamperProtectionsPair').
+/** BEGIN locationsAndTamperProtectionsPair, ID: '25', NAME: 'l=[outerZone] - t=[perimeterProtection]' */
+description(25,'l=[outerZone] - t=[perimeterProtection]','locationsAndTamperProtectionsPair').
 locationsAndTamperProtectionsPair(25).
-locations(25,[20]).
-tamperProtections(25,[]).
-/** END locationsAndTamperProtectionsPair, ID: '25', NAME: 'l=[userAHome] - t=[]' */
+locations(25,[21]).
+tamperProtections(25,[22]).
+/** END locationsAndTamperProtectionsPair, ID: '25', NAME: 'l=[outerZone] - t=[perimeterProtection]' */
+
+
+/** BEGIN locationsAndTamperProtectionsPair, ID: '26', NAME: 'l=[userAHome] - t=[]' */
+description(26,'l=[userAHome] - t=[]','locationsAndTamperProtectionsPair').
+locationsAndTamperProtectionsPair(26).
+locations(26,[20]).
+tamperProtections(26,[]).
+/** END locationsAndTamperProtectionsPair, ID: '26', NAME: 'l=[userAHome] - t=[]' */
 
 /** END confidentialitySpecification, ID: '1', NAME: 'cloud confidentiality specification' */
 

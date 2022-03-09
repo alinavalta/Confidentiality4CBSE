@@ -12,17 +12,6 @@
   <assemblyContexts__ComposedStructure id="_XOyEsMOBEeWst9mTsticNA" entityName="CreditCardCenter &lt;CreditCardCenter>">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#__s82QMN5EeWPE-QAhbUzuQ"/>
   </assemblyContexts__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="__VHF0CHcEd6lJo4DCALHMw" entityName="ProvDelegation Provided_AnInterface -> Provided_AnInterface_AComponent">
-    <innerProvidedRole_ProvidedDelegationConnector href="default.repository#_qZKs0CHbEd62GabW1zGSBw"/>
-  </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_H4IWQJzeEeWPbeRUuP85Tg" entityName="Connector Energy Visualization -> Database">
-    <providedRole_AssemblyConnector href="default.repository#_gzn2wJqqEeWvQ_r7FgUerw"/>
-    <requiredRole_AssemblyConnector href="default.repository#_QecioJqrEeWvQ_r7FgUerw"/>
-  </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_OlEIUJzeEeWPbeRUuP85Tg" entityName="Connector Energy Visualization -> Energy Meter Assembly Context">
-    <providedRole_AssemblyConnector href="default.repository#_lOcRsJqpEeWvQ_r7FgUerw"/>
-    <requiredRole_AssemblyConnector href="default.repository#_T8CD0JqrEeWvQ_r7FgUerw"/>
-  </connectors__ComposedStructure>
   <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_U-K-4MN_EeWst9mTsticNA" entityName="ReqDelegation Required_Input_TravelPlanner -> Required_Input" outerRequiredRole_RequiredDelegationConnector="_QEX-YMN_EeWst9mTsticNA" assemblyContext_RequiredDelegationConnector="_2pBlYMN-EeWst9mTsticNA">
     <innerRequiredRole_RequiredDelegationConnector href="default.repository#_xnF5YMN6EeWPE-QAhbUzuQ"/>
   </connectors__ComposedStructure>

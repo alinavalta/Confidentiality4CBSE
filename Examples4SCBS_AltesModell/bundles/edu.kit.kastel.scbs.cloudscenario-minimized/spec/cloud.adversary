@@ -3,13 +3,13 @@
   <adversaries id="_hJIs4BXyEeabKfvw_S-vrQ" name="cloud end user A">
     <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSetMapEntry" href="cloud.confidentiality#_nEocojSLEeaRTJfWzuCJjw"/>
     <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSetMapEntry" href="cloud.confidentiality#_liW6Um9fEeam26epJlCOmw"/>
-    <locationsAndTamperProtectionsPairs href="cloud.confidentiality#_VNEuEBXzEeabKfvw_S-vrQ"/>
+    <locationsAndTamperProtectionsPairs href="cloud.confidentiality#_wcLpPJMXEeyOLrLhYWYnJA"/>
   </adversaries>
   <adversaries id="_6U1D0BXzEeabKfvw_S-vrQ" name="cloud service administrator">
     <mayKnowData xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSetMapEntry" href="cloud.confidentiality#_liW6Um9fEeam26epJlCOmw"/>
     <locationsAndTamperProtectionsPairs href="cloud.confidentiality#_A5UHXERqEeengr1ydYHSKA"/>
   </adversaries>
   <adversaries id="_SuRkUI7cEealUusoPax18A" name="ChuckNorris">
-    <locationsAndTamperProtectionsPairs href="cloud.confidentiality#_xz90jI7dEealUusoPax18A"/>
+    <locationsAndTamperProtectionsPairs href="cloud.confidentiality#_wcLpPJMXEeyOLrLhYWYnJA"/>
   </adversaries>
 </edu.kit.kastel.scbs.confidentiality.adversary:Adversaries>

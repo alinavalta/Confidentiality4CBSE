@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <edu.kit.kastel.scbs.confidentiality:ConfidentialitySpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:edu.kit.kastel.scbs.confidentiality="http://edu.kit.kastel.scbs.confidentiality" xmlns:edu.kit.kastel.scbs.confidentiality.data="http://edu.kit.kastel.scbs.confidentiality/data" id="_4fg0MJziEeWvbrCzHVJijg">
-  <locationsAndTamperProtectionsPairs id="_-YubgM6AEeWqSdNpnh9tmQ" locations="_CB0pIc6BEeWqSdNpnh9tmQ"/>
-  <locationsAndTamperProtectionsPairs id="_QBclsM6BEeWqSdNpnh9tmQ" locations="__RugEc6AEeWqSdNpnh9tmQ"/>
-  <locationsAndTamperProtectionsPairs id="_RmAIsM6BEeWqSdNpnh9tmQ" locations="_DCp0Ac6BEeWqSdNpnh9tmQ"/>
-  <locationsAndTamperProtectionsPairs id="_XwoCcM6CEeWqSdNpnh9tmQ" locations="_SpLngc6CEeWqSdNpnh9tmQ"/>
-  <locationsAndTamperProtectionsPairs id="_txU5gM6CEeWqSdNpnh9tmQ" locations="_nv3tYc6CEeWqSdNpnh9tmQ"/>
-  <locationsAndTamperProtectionsPairs id="_8bxUsM6CEeWqSdNpnh9tmQ" locations="_IYDLYc6BEeWqSdNpnh9tmQ"/>
-  <locations id="__RugEc6AEeWqSdNpnh9tmQ" name="TravelAgency"/>
-  <locations id="_CB0pIc6BEeWqSdNpnh9tmQ" name="Airline"/>
-  <locations id="_DCp0Ac6BEeWqSdNpnh9tmQ" name="UserControlled"/>
-  <locations id="_IYDLYc6BEeWqSdNpnh9tmQ" name="Internet"/>
-  <locations id="_SpLngc6CEeWqSdNpnh9tmQ" name="CoffeShop"/>
-  <locations id="_nv3tYc6CEeWqSdNpnh9tmQ" name="Street"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="__WYS5MOFEeWst9mTsticNA" name="CreditCardInformation"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_TmShxMOGEeWst9mTsticNA" name="ComissionData"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_FoQgpMOGEeWst9mTsticNA" name="TravelData"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_9N5G9MOGEeWst9mTsticNA" name="CreditCardInformationDeclassified"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_W7aTtM5sEeWFJak7Wqvc0g" name="FlightOffer"/>
+  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_EZMjdM5xEeWFJak7Wqvc0g" name="Selection"/>
   <parametersAndDataPairs id="_UuIJU-RQEeWuZOK2YocvJA" dataTargets="_9N5G9MOGEeWst9mTsticNA _W7aTtM5sEeWFJak7Wqvc0g _EZMjdM5xEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA">
     <parameterSources>\return</parameterSources>
   </parametersAndDataPairs>
@@ -23,9 +17,6 @@
   </parametersAndDataPairs>
   <parametersAndDataPairs id="_XhR8s85zEeW6RpZqSiINDQ" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g">
     <parameterSources>flightOffers</parameterSources>
-  </parametersAndDataPairs>
-  <parametersAndDataPairs id="_DHYO4850EeW6RpZqSiINDQ" dataTargets="_FoQgpMOGEeWst9mTsticNA">
-    <parameterSources>requestData</parameterSources>
   </parametersAndDataPairs>
   <parametersAndDataPairs id="_SKPxI850EeW6RpZqSiINDQ" dataTargets="_EZMjdM5xEeWFJak7Wqvc0g _W7aTtM5sEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA">
     <parameterSources>flightOffer</parameterSources>
@@ -54,10 +45,16 @@
   <parametersAndDataPairs id="_bZZg8853EeW6RpZqSiINDQ" dataTargets="_W7aTtM5sEeWFJak7Wqvc0g _EZMjdM5xEeWFJak7Wqvc0g _FoQgpMOGEeWst9mTsticNA">
     <parameterSources>airline</parameterSources>
   </parametersAndDataPairs>
-  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="__WYS5MOFEeWst9mTsticNA" name="CreditCardInformation"/>
-  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_TmShxMOGEeWst9mTsticNA" name="ComissionData"/>
-  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_FoQgpMOGEeWst9mTsticNA" name="TravelData"/>
-  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_9N5G9MOGEeWst9mTsticNA" name="CreditCardInformationDeclassified"/>
-  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_W7aTtM5sEeWFJak7Wqvc0g" name="FlightOffer"/>
-  <dataIdentifier xsi:type="edu.kit.kastel.scbs.confidentiality.data:DataSet" id="_EZMjdM5xEeWFJak7Wqvc0g" name="Selection"/>
+  <locations id="__RugEc6AEeWqSdNpnh9tmQ" name="TravelAgency"/>
+  <locations id="_CB0pIc6BEeWqSdNpnh9tmQ" name="Airline"/>
+  <locations id="_DCp0Ac6BEeWqSdNpnh9tmQ" name="UserControlled"/>
+  <locations id="_IYDLYc6BEeWqSdNpnh9tmQ" name="Internet"/>
+  <locations id="_SpLngc6CEeWqSdNpnh9tmQ" name="CoffeShop"/>
+  <locations id="_nv3tYc6CEeWqSdNpnh9tmQ" name="Street"/>
+  <locationsAndTamperProtectionsPairs id="_-YubgM6AEeWqSdNpnh9tmQ" locations="_CB0pIc6BEeWqSdNpnh9tmQ"/>
+  <locationsAndTamperProtectionsPairs id="_QBclsM6BEeWqSdNpnh9tmQ" locations="__RugEc6AEeWqSdNpnh9tmQ"/>
+  <locationsAndTamperProtectionsPairs id="_RmAIsM6BEeWqSdNpnh9tmQ" locations="_DCp0Ac6BEeWqSdNpnh9tmQ"/>
+  <locationsAndTamperProtectionsPairs id="_XwoCcM6CEeWqSdNpnh9tmQ" locations="_SpLngc6CEeWqSdNpnh9tmQ"/>
+  <locationsAndTamperProtectionsPairs id="_txU5gM6CEeWqSdNpnh9tmQ" locations="_nv3tYc6CEeWqSdNpnh9tmQ"/>
+  <locationsAndTamperProtectionsPairs id="_8bxUsM6CEeWqSdNpnh9tmQ" locations="_IYDLYc6BEeWqSdNpnh9tmQ"/>
 </edu.kit.kastel.scbs.confidentiality:ConfidentialitySpecification>

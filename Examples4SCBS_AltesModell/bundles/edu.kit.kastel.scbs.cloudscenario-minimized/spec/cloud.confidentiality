@@ -37,6 +37,7 @@
   <locations id="_BeJFURXzEeabKfvw_S-vrQ" name="outerZone"/>
   <tamperProtections id="_FBFnohXzEeabKfvw_S-vrQ" name="perimeterProtection"/>
   <locationsAndTamperProtectionsPairs id="_A5UHXERqEeengr1ydYHSKA" locations="_BeJFURXzEeabKfvw_S-vrQ"/>
+  <locationsAndTamperProtectionsPairs id="_wcLpPJMXEeyOLrLhYWYnJA"/>
   <locationsAndTamperProtectionsPairs id="_NJMjvG6GEeam26epJlCOmw" locations="_BeJFURXzEeabKfvw_S-vrQ" tamperProtections="_FBFnohXzEeabKfvw_S-vrQ"/>
   <locationsAndTamperProtectionsPairs id="_H7Hf3G6HEeam26epJlCOmw" locations="_31ZCYRXyEeabKfvw_S-vrQ"/>
 </edu.kit.kastel.scbs.confidentiality:ConfidentialitySpecification>
